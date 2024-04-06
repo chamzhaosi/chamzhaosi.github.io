@@ -1,5 +1,9 @@
-body{
+/* body{
     overflow-x: hidden;
+} */
+
+.row{
+    --bs-gutter-x: 0; 
 }
 
 section{
@@ -28,9 +32,16 @@ section{
     font-weight: 600;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 576px) {
     /* For mobile phones: */
     #initial_page{
-        height: 100% !important;
+        height: 100% !important;  
+    }
+  }
+
+@media only screen and (min-height: 900px) {
+    /* For mobile phones: */
+    #initial_page{
+        height: 100vh !important;  
     }
   }
