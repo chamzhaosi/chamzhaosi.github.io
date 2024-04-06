@@ -1,7 +1,3 @@
-/* body{
-    overflow-x: hidden;
-} */
-
 .row{
     --bs-gutter-x: 0; 
 }
@@ -31,6 +27,26 @@ section{
     font-family: "Reddit Mono", monospace;
     font-weight: 600;
 }
+
+#header {
+    transition: opacity 0.5s linear, transform 0.5s linear; /* Smooth transition for opacity and transform */
+    opacity: 0; /* Start invisible */
+    transform: translateY(-100%); /* Start above the visible area */
+    height: 0;
+}
+  
+.header-visible {
+    opacity: 1 !important; /* Fully visible */
+    transform: translateY(0%) !important; /* Return to original position */
+    height: 100% !important;
+}
+
+
+.bg-dark,
+.bg-body-tertiary {
+  background-color: #643843 !important; /* Replace #123456 with your desired color */
+}
+
 
 @media only screen and (max-width: 576px) {
     /* For mobile phones: */
