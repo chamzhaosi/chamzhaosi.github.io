@@ -1,5 +1,5 @@
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
 
 .row {
@@ -57,7 +57,6 @@ section {
   background-color: #643843 !important; /* Replace #123456 with your desired color */
 }
 
-
 #experience_page {
   /* background:linear-gradient(0deg, rgba(255, 179, 142, 0.8), rgba(254, 199, 180, 0.5)), url("assets/img/initial-bg.avif"); */
   background: conic-gradient(
@@ -114,14 +113,14 @@ section {
   box-shadow: 10px 10px 8px #918983;
 }
 
-#kemajuan {
+#sriMenawan {
   /* background-color: rgba(189, 174, 164, 0.5); */
   background-image: linear-gradient(
       157deg,
       rgba(0, 0, 0, 0.6),
       rgba(109, 112, 21, 0.9)
     ),
-    url("assets/img/kemajuan-bg.jpg");
+    url("assets/img/sriMenawan-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   font-weight: 500;
@@ -174,30 +173,218 @@ section {
 }
 
 @media only screen and (max-width: 576px) {
-    /* For mobile phones: */
-    #initial_page {
-      height: 100% !important;
-    }
-  
-    #working_container {
-      overflow-x: hidden !important;
-    }
+  /* For mobile phones: */
+  #initial_page {
+    height: 100% !important;
   }
-  
-  @media only screen and (min-height: 900px) {
-    /* For mobile phones: */
-    #initial_page {
-      height: 100vh !important;
-    }
+
+  #working_container {
+    overflow-x: hidden !important;
   }
-  
+}
+
+@media only screen and (min-height: 900px) {
+  /* For mobile phones: */
+  #initial_page {
+    height: 100vh !important;
+  }
+}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .gallery {
     --s: 80px; /* control the size */
     grid: auto-flow var(--s) / repeat(2, var(--s));
-    margin: 20px
+    margin: 20px;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#education_page {
+  --color: rgba(30, 30, 30);
+  --bgColor: rgba(245, 245, 245);
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--color);
+  background: var(--bgColor);
+}
+
+#education_page > h1 {
+  text-align: center;
+}
+
+#education_page > ul {
+  --col-gap: 2rem;
+  --row-gap: 2rem;
+  --line-w: 0.25rem;
+  display: grid;
+  grid-template-columns: var(--line-w) 1fr;
+  grid-auto-columns: max-content;
+  column-gap: var(--col-gap);
+  list-style: none;
+  width: min(60rem, 90%);
+  margin-inline: auto;
+}
+
+/* line */
+#education_page > ul::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 20;
+  background: rgb(225, 225, 225);
+  border-radius: calc(var(--line-w) / 2);
+}
+
+/* columns*/
+
+/* row gaps */
+#education_page > ul li:not(:last-child) {
+  margin-bottom: var(--row-gap);
+}
+
+/* card */
+#education_page > ul li {
+  grid-column: 2;
+  --inlineP: 1.5rem;
+  margin-inline: var(--inlineP);
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+}
+
+/* date */
+#education_page > ul li .date {
+  --dateH: 3rem;
+  height: var(--dateH);
+  margin-inline: calc(var(--inlineP) * -1);
+
+  text-align: center;
+  background-color: var(--accent-color);
+
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  display: grid;
+  place-content: center;
+  position: relative;
+
+  border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+}
+
+/* date flap */
+#education_page > ul li .date::before {
+  content: "";
+  width: var(--inlineP);
+  aspect-ratio: 1;
+  background: var(--accent-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+  position: absolute;
+  top: 100%;
+
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  right: 0;
+}
+
+/* circle */
+#education_page > ul li .date::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  aspect-ratio: 1;
+  background: var(--bgColor);
+  border: 0.3rem solid var(--accent-color);
+  border-radius: 50%;
+  top: 50%;
+
+  transform: translate(50%, -50%);
+  right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+}
+
+/* title descr */
+#education_page > ul li .title,
+#education_page > ul li .descr {
+  background: var(--bgColor);
+  position: relative;
+  padding-inline: 1.5rem;
+}
+#education_page > ul li .title {
+  overflow: hidden;
+  padding-block-start: 1.5rem;
+  padding-block-end: 1rem;
+  font-weight: 500;
+}
+#education_page > ul li .descr {
+  padding-block-end: 1.5rem;
+  font-weight: 800;
+  font-size: large;
+}
+
+/* shadows */
+#education_page > ul li .title::before,
+#education_page > ul li .descr::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  left: 50%;
+  border-radius: 50%;
+  filter: blur(4px);
+  transform: translate(-50%, 50%);
+}
+
+#education_page > ul li .title::before {
+  bottom: calc(100% + 0.125rem);
+}
+
+#education_page > ul li .descr::before {
+  z-index: -1;
+  bottom: 0.25rem;
+}
+
+@media (min-width: 40rem) {
+  #education_page > ul {
+    grid-template-columns: 1fr var(--line-w) 1fr;
+  }
+  #education_page > ul::before {
+    grid-column: 2;
+  }
+  #education_page > ul li:nth-child(odd) {
+    grid-column: 1;
+  }
+  #education_page > ul li:nth-child(even) {
+    grid-column: 3;
   }
 
+  /* start second card */
+  #education_page > ul li:nth-child(2) {
+    grid-row: 2/4;
+  }
+
+  #education_page > ul li:nth-child(odd) .date::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    left: 0;
+  }
+
+  #education_page > ul li:nth-child(odd) .date::after {
+    transform: translate(-50%, -50%);
+    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  #education_page > ul li:nth-child(odd) .date {
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+  }
 }
