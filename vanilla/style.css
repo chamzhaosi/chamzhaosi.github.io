@@ -1,63 +1,143 @@
-.row{
-    --bs-gutter-x: 0; 
+.row {
+  --bs-gutter-x: 0;
 }
 
-section{
-    margin: 0%;
+section {
+  margin: 0%;
 }
 
-.text-justify{
-    text-align: justify;
+.text-justify {
+  text-align: justify;
 }
 
-#initial_page{
-    /* background:linear-gradient(0deg, rgba(255, 179, 142, 0.8), rgba(254, 199, 180, 0.5)), url("assets/img/initial-bg.avif"); */
-    background:conic-gradient(from 250deg, rgba(148, 78, 99, 0.2), rgba(255, 179, 142, 0.5), rgba(254, 199, 180, 0.3)), url("assets/img/initial-bg.avif");
-    /* background-image: url("assets/img/initial-bg.avif"); */
-    background-repeat: no-repeat;
-    background-size: cover;
+#initial_page {
+  /* background:linear-gradient(0deg, rgba(255, 179, 142, 0.8), rgba(254, 199, 180, 0.5)), url("assets/img/initial-bg.avif"); */
+  background: conic-gradient(
+      from 250deg,
+      rgba(148, 78, 99, 0.2),
+      rgba(255, 179, 142, 0.5),
+      rgba(254, 199, 180, 0.3)
+    ),
+    url("assets/img/initial-bg.avif");
+  /* background-image: url("assets/img/initial-bg.avif"); */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#p_name{
-    font-family: "Reem Kufi Fun", sans-serif;
-    font-weight: 700;
+#p_name {
+  font-family: "Reem Kufi Fun", sans-serif;
+  font-weight: 700;
 }
 
-#p_desc{
-    font-family: "Reddit Mono", monospace;
-    font-weight: 600;
+#p_desc {
+  font-family: "Reddit Mono", monospace;
+  font-weight: 600;
 }
 
 #header {
-    transition: opacity 0.5s linear, transform 0.5s linear; /* Smooth transition for opacity and transform */
-    opacity: 0; /* Start invisible */
-    transform: translateY(-100%); /* Start above the visible area */
-    height: 0;
-}
-  
-.header-visible {
-    opacity: 1 !important; /* Fully visible */
-    transform: translateY(0%) !important; /* Return to original position */
-    height: 100% !important;
+  transition: opacity 0.5s linear, transform 0.5s linear; /* Smooth transition for opacity and transform */
+  opacity: 0; /* Start invisible */
+  transform: translateY(-100%); /* Start above the visible area */
+  height: 0;
 }
 
+.header-visible {
+  opacity: 1 !important; /* Fully visible */
+  transform: translateY(0%) !important; /* Return to original position */
+  height: 100% !important;
+}
 
 .bg-dark,
 .bg-body-tertiary {
   background-color: #643843 !important; /* Replace #123456 with your desired color */
 }
 
-
 @media only screen and (max-width: 576px) {
-    /* For mobile phones: */
-    #initial_page{
-        height: 100% !important;  
-    }
+  /* For mobile phones: */
+  #initial_page {
+    height: 100% !important;
   }
+}
 
 @media only screen and (min-height: 900px) {
-    /* For mobile phones: */
-    #initial_page{
-        height: 100vh !important;  
-    }
+  /* For mobile phones: */
+  #initial_page {
+    height: 100vh !important;
   }
+}
+
+#experience_page {
+  /* background:linear-gradient(0deg, rgba(255, 179, 142, 0.8), rgba(254, 199, 180, 0.5)), url("assets/img/initial-bg.avif"); */
+  background: conic-gradient(
+      from 65deg,
+      rgba(148, 78, 99, 0.0),
+      rgba(153, 133, 119, 0.2),
+      rgba(254, 199, 180, 0.3)
+    ),
+    url("assets/img/experience-bg.jpg");
+  /* background-image: url("assets/img/experience-bg.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Optional: Style the scrollbar for better aesthetics */
+.container-fluid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.container-fluid::-webkit-scrollbar-thumb {
+  background: #a17f5a;
+}
+
+.container-fluid::-webkit-scrollbar-thumb:hover {
+  background: #9c672f;
+}
+
+
+#tigaky {
+  /* background-color: rgba(189, 174, 164, 0.5); */
+  background-image: linear-gradient(
+      157deg,
+      rgba(0, 0, 0, 0.6),
+      rgba(105, 57, 23, 0.7)
+    ),
+    url("assets/img/tigaky-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-weight: 500;
+  max-width: 600px;
+  box-shadow: 10px 10px 8px #918983;
+}
+
+#maco {
+  /* background-color: rgba(189, 174, 164, 0.5); */
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6),
+      rgba(34, 54, 84, 0.8)
+    ),
+    url("assets/img/maco-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-weight: 500;
+  max-width: 600px;
+  box-shadow: 10px 10px 8px #918983;
+}
+
+#kemajuan {
+  /* background-color: rgba(189, 174, 164, 0.5); */
+  background-image: linear-gradient(
+      157deg,
+      rgba(0, 0, 0, 0.6),
+      rgba(109, 112, 21, 0.9)
+    ),
+    url("assets/img/kemajuan-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-weight: 500;
+  max-width: 600px;
+  box-shadow: 10px 10px 8px #918983;
+}
+
+#fy_project{
+    background-color: rgba(60, 160, 176, 0.6);
+}
