@@ -2,6 +2,10 @@ body {
   overflow-x: hidden;
 }
 
+section {
+  scroll-margin-top: 70px; /* Adjust this value to match your fixed header's height */
+}
+
 .row {
   --bs-gutter-x: 0;
 }
@@ -198,8 +202,6 @@ section {
     margin: 20px;
   }
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
 *,
 *::before,
