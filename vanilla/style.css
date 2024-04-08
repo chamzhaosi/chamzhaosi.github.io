@@ -58,7 +58,7 @@ section {
 
 .bg-dark,
 .bg-body-tertiary {
-  background-color: #643843 !important; /* Replace #123456 with your desired color */
+  background-color: #643843 !important; 
 }
 
 #experience_page {
@@ -457,6 +457,10 @@ div.english-container > div.item1{
 
 div.malay-container > div.item1{
   grid-column-start: span 3;
+}
+
+footer{
+  background-color: #643843 !important;
 }
 
 
