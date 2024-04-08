@@ -136,7 +136,8 @@ section {
   background-image: linear-gradient(
       to left,
       rgba(60, 160, 176, 0.6),
-      rgba(255, 255, 255, 0.9)
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 1)
     ),
     url("assets/img/fy-project-bg.jpg");
   background-repeat: no-repeat;
@@ -174,33 +175,6 @@ section {
   margin: 0;
   display: grid;
   place-content: center;
-}
-
-@media only screen and (max-width: 576px) {
-  /* For mobile phones: */
-  #initial_page {
-    height: 100% !important;
-  }
-
-  #working_container {
-    overflow-x: hidden !important;
-  }
-}
-
-@media only screen and (min-height: 900px) {
-  /* For mobile phones: */
-  #initial_page {
-    height: 100vh !important;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  .gallery {
-    --s: 80px; /* control the size */
-    grid: auto-flow var(--s) / repeat(2, var(--s));
-    margin: 20px;
-  }
 }
 
 *,
@@ -356,6 +330,177 @@ section {
 #education_page > ul li .descr::before {
   z-index: -1;
   bottom: 0.25rem;
+}
+
+#skills_and_language_page{
+  /* background: linear-gradient(to right,#A3FFD6, #FFF7FC); */
+  background-color: #F0EDCF;
+}
+
+ul.cloud {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 2.5rem;
+}
+
+ul.cloud span {
+  color: #a33;
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.125rem 0.25rem;
+  text-decoration: none;
+  position: relative;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+}
+
+ul.cloud span[data-weight="1"] { --size: 1; }
+ul.cloud span[data-weight="2"] { --size: 2; }
+ul.cloud span[data-weight="3"] { --size: 3; }
+ul.cloud span[data-weight="4"] { --size: 4; }
+ul.cloud span[data-weight="5"] { --size: 5; }
+ul.cloud span[data-weight="6"] { --size: 6; }
+ul.cloud span[data-weight="7"] { --size: 7; }
+ul.cloud span[data-weight="8"] { --size: 8; }
+ul.cloud span[data-weight="9"] { --size: 9; }
+
+ul.cloud span {
+  --size: 4;
+  font-size: calc(var(--size) * 0.3rem + 1.0rem);
+  font-weight: 600;
+}
+
+ul.cloud[data-show-value] span::after {
+  content: " (" attr(data-weight) ")";
+  font-size: 1rem;
+}
+
+ul.cloud li:nth-child(n+1) span {
+  --color: #1D2B53;
+  color: var(--color);
+}
+
+ul.cloud li:nth-child(2n+1) span {
+  --color: #7E2553;
+  color: var(--color);
+}
+
+ul.cloud li:nth-child(3n+1) span { 
+  --color: #FF004D; 
+  color: var(--color);
+}
+
+ul.cloud li:nth-child(4n+1) span { 
+  --color: #BED754; 
+  color: var(--color);
+}
+
+ul.cloud span {
+  opacity: calc((15 - (9 - var(--size))) / 15); 
+  /* ... */
+}
+
+ul.cloud span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background: var(--color);
+  transform: translate(-50%, 0);
+  opacity: 0.15;
+  border-radius: 15px;
+  transition: width 0.25s;
+}
+
+/* ul.cloud span:focus::before,
+ul.cloud span:hover::before {
+  width: 100%;
+} */
+
+ul.cloud span.span-hover::before {
+  width: 100%;
+}
+
+div.mandarin-container,
+div.english-container,
+div.malay-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 5px;
+  background-color: rgba(112, 66, 100, 0.7);
+  padding: 2px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+div.mandarin-container > div,
+div.english-container > div,
+div.malay-container > div {
+  /* background-color: rgba(255, 201, 74, 0.8); */
+  background-color: #FFBE98;
+  text-align: center;
+  padding: 5px 0;
+  /* font-size: 30px; */
+}
+
+div.mandarin-container > div.item1{
+  grid-column-start: span 4;
+}
+
+div.english-container > div.item1{
+  grid-column-start: span 3;
+}
+
+div.malay-container > div.item1{
+  grid-column-start: span 3;
+}
+
+
+@media (prefers-reduced-motion) {
+  ul.cloud * {
+    transition: none !important;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  /* For mobile phones: */
+  #initial_page {
+    height: 100% !important;
+  }
+
+  #working_container {
+    overflow-x: hidden !important;
+  }
+}
+
+@media only screen and (min-height: 900px) {
+  /* For mobile phones: */
+  #initial_page {
+    height: 100vh !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .gallery {
+    --s: 80px; /* control the size */
+    grid: auto-flow var(--s) / repeat(2, var(--s));
+    margin: 20px;
+  }
+
+  #fy_project {
+    background-image: linear-gradient(
+        to top,
+        rgba(198, 220, 186, 0.6),
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 1)
+      ),
+      url("assets/img/fy-project-bg.jpg");
+  }
 }
 
 @media (min-width: 40rem) {
