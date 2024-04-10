@@ -87,7 +87,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Run at the page is loaded (one time only)
+  addAndRemoveClassSequentially("li > span", "span-hover", 500);
+
+  // Every 10 second run one time
   setInterval(() => {
     addAndRemoveClassSequentially("li > span", "span-hover", 500);
-  }, 8000);
+  }, 12000);
 });

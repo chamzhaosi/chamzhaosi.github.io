@@ -33,13 +33,15 @@ section {
 }
 
 #p_name {
-  font-family: "Reem Kufi Fun", sans-serif;
+  /* font-family: "Reem Kufi Fun", sans-serif; */
+  font-family: Garamond, serif;
   font-weight: 700;
 }
 
 #p_desc {
-  font-family: "Reddit Mono", monospace;
-  font-weight: 600;
+  /* font-family: "Reddit Mono", monospace; */
+  font-family: Helvetica, sans-serif;
+  font-weight: 500;
 }
 
 #header {
@@ -91,7 +93,8 @@ section {
   /* background-color: rgba(189, 174, 164, 0.5); */
   background-image: linear-gradient(
       157deg,
-      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8),
       rgba(105, 57, 23, 0.7)
     ),
     url("assets/img/tigaky-bg.jpg");
@@ -105,8 +108,9 @@ section {
 #maco {
   /* background-color: rgba(189, 174, 164, 0.5); */
   background-image: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.6),
+      165deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8),
       rgba(34, 54, 84, 0.8)
     ),
     url("assets/img/maco-bg.jpg");
@@ -121,7 +125,8 @@ section {
   /* background-color: rgba(189, 174, 164, 0.5); */
   background-image: linear-gradient(
       157deg,
-      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8),
       rgba(109, 112, 21, 0.9)
     ),
     url("assets/img/sriMenawan-bg.jpg");
@@ -130,6 +135,14 @@ section {
   font-weight: 500;
   max-width: 600px;
   box-shadow: 10px 10px 8px #918983;
+}
+
+.company_name{
+  font-family: Georgia, serif;
+}
+
+.job_descr{
+  font-family: Verdana, sans-serif;
 }
 
 #fy_project {
@@ -343,6 +356,7 @@ ul.cloud {
   display: flex;
   flex-wrap: wrap;
   line-height: 2.5rem;
+  font-family: "Noto Sans", sans-serif;
 }
 
 ul.cloud span {
@@ -357,18 +371,18 @@ ul.cloud span {
 }
 
 ul.cloud span[data-weight="1"] { --size: 1; }
-ul.cloud span[data-weight="2"] { --size: 2; }
-ul.cloud span[data-weight="3"] { --size: 3; }
-ul.cloud span[data-weight="4"] { --size: 4; }
-ul.cloud span[data-weight="5"] { --size: 5; }
-ul.cloud span[data-weight="6"] { --size: 6; }
-ul.cloud span[data-weight="7"] { --size: 7; }
-ul.cloud span[data-weight="8"] { --size: 8; }
-ul.cloud span[data-weight="9"] { --size: 9; }
+ul.cloud span[data-weight="2"] { --size: 3; }
+ul.cloud span[data-weight="3"] { --size: 5; }
+ul.cloud span[data-weight="4"] { --size: 7; }
+ul.cloud span[data-weight="5"] { --size: 9; }
+ul.cloud span[data-weight="6"] { --size: 11; }
+ul.cloud span[data-weight="7"] { --size: 13; }
+ul.cloud span[data-weight="8"] { --size: 15; }
+ul.cloud span[data-weight="9"] { --size: 17; }
 
 ul.cloud span {
   --size: 4;
-  font-size: calc(var(--size) * 0.3rem + 1.0rem);
+  font-size: calc(var(--size) * 0.14rem + 0.5rem);
   font-weight: 600;
 }
 
@@ -411,7 +425,7 @@ ul.cloud span::before {
   height: 100%;
   background: var(--color);
   transform: translate(-50%, 0);
-  opacity: 0.15;
+  opacity: 0.3;
   border-radius: 15px;
   transition: width 0.25s;
 }
@@ -431,7 +445,7 @@ div.malay-container {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   grid-gap: 5px;
-  background-color: rgba(112, 66, 100, 0.7);
+  background-color: rgba(112, 66, 100, 1);
   padding: 2px;
   margin: 10px;
   border-radius: 5px;
@@ -440,10 +454,11 @@ div.malay-container {
 div.mandarin-container > div,
 div.english-container > div,
 div.malay-container > div {
-  /* background-color: rgba(255, 201, 74, 0.8); */
-  background-color: #FFBE98;
+  background-color: rgba(255, 201, 74, 0.8);
+  /* background-color: #FFBE98; */
   text-align: center;
   padding: 5px 0;
+  border-radius: 5px;
   /* font-size: 30px; */
 }
 
