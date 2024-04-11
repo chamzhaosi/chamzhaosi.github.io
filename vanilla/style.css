@@ -109,6 +109,10 @@ section {
   background: #9c672f;
 }
 
+.curs-point{
+  cursor: pointer;
+}
+
 #tigaky {
   /* background-color: rgba(189, 174, 164, 0.5); */
   background-image: linear-gradient(
