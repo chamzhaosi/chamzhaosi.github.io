@@ -102,15 +102,15 @@
           <div class="d-flex justify-content-center">
             <h2 id="p_name" class="pb-2">CHAM ZHAO SI</h2>
           </div>
+          <!-- <p id="p_desc" class="text-justify fs-6">
+            When I was 24, I made a pivotal decision to <b>change</b> my career from <b>accounting to software engineering</b> . After completing my SPM (Sijil Pelajaran Malaysia), I was <b>uncertain</b> about my future career path, so I chose accounting, a field widely regarded as having <b>plentiful job opportunities</b>. However, after two years, I realized that I <b> did not enjoy</b> the profession and <b>lacked a clear future career plan</b>. <span id="hidden-content" class="d-none">This led me to a period of self-reflection to better understand my interests and desires. In a self-directed effort, with no one to guide me, I decided to <b>learn programming</b>. After researching on Google and various forums, I learned that the <b>C language</b> is challenging and not particularly beginner-friendly. However, mastering it can be <b>immensely beneficial</b>, as it establishes a <b>strong foundation for understanding the logic and concepts</b> that are crucial for more advanced programming.</span> <span id="three_dots" onclick="showContent()"> ... </span>Although I've since forgotten much of it, that foundational knowledge <b>greatly assisted </b>me in learning other later, higher-level programming languages such as Java and Python. Therefore, in 2019, I <b>left the field of accounting to join the expansive world of software engineering</b>, immersing myself in unfamiliar subjects and pursuing cutting-edge technology.
+          </p> -->
           <p id="p_desc" class="text-justify fs-6">
-            As a recent Software Engineering graduate, I am deeply passionate
-            about developing efficient and scalable software solutions. With a
-            robust foundation in Python, JavaScript, and web development
-            frameworks including Flask, Angular, and Django, I have honed my
-            skills through internships and part-time work. I am now seeking a
-            Junior Software Engineer position to apply my technical expertise
-            and collaborative spirit to impactful projects within the IT
-            industry.
+            At 24, I decided to pivot from accounting to software engineering, seeking a career aligned with my interests. Self-taught in programming, starting with the challenging yet foundational C language, I quickly grasped essential concepts that later eased my mastery of advanced languages like Java and Python. In 2019, I embraced the dynamic field of software engineering, committing to continual learning and innovation. 
+            <span class="text-decoration-underline d-flex justify-content-end" 
+              data-bs-toggle="modal"
+              data-bs-target="#personalStoryModal"> Read Details 
+            </span> 
           </p>
         </div>
       </div>
@@ -287,13 +287,13 @@
         >
           <div class="gallery">
             <img
-              src="assets/img/3d-modeling-1.png"
+              src="assets/img/3d-modeling-org.png"
               alt="3d modeling image"
               data-bs-toggle="modal"
               data-bs-target="#3dModelingModal"
             />
             <img
-              src="assets/img/final-device-1.jpeg"
+              src="assets/img/final-device-org.jpeg"
               alt="final product image"
               data-bs-toggle="modal"
               data-bs-target="#finalDeviceModal"
@@ -565,6 +565,34 @@
 <!-- Modal -->
 <div
   class="modal fade"
+  id="personalStoryModal"
+  tabindex="-1"
+  aria-labelledby="personalStoryModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="personalStoryModalLabel">About me</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body d-flex justify-content-center">
+        <p id="model-p-descr" class="text-justify fs-6">
+            When I was 24, I made a pivotal decision to <b>change</b> my career from <b>accounting to software engineering</b> . After completing my SPM (Sijil Pelajaran Malaysia), I was <b>uncertain</b> about my future career path, so I chose accounting, a field widely regarded as having <b>plentiful job opportunities</b>. However, after two years, I realized that I <b> did not enjoy</b> the profession and <b>lacked a clear future career plan</b>. This led me to a period of self-reflection to better understand my interests and desires. In a self-directed effort, with no one to guide me, I decided to <b>learn programming</b>. After researching on Google and various forums, I learned that the <b>C language</b> is challenging and not particularly beginner-friendly. However, mastering it can be <b>immensely beneficial</b>, as it establishes a <b>strong foundation for understanding the logic and concepts</b> that are crucial for more advanced programming. Although I've since forgotten much of it, that foundational knowledge <b>greatly assisted </b>me in learning other later, higher-level programming languages such as Java and Python. Therefore, in 2019, I <b>left the field of accounting to join the expansive world of software engineering</b>, immersing myself in unfamiliar subjects and pursuing cutting-edge technology.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
   id="3dModelingModal"
   tabindex="-1"
   aria-labelledby="3dModelingModalLabel"
@@ -632,25 +660,25 @@
       </div>
       <div class="modal-body d-flex justify-content-center row">
         <img
-          src="assets/img/final-device-1.jpeg"
+          src="assets/img/final-device-1.png"
           alt="first final device image"
           height="10%"
           class="col-6 py-2"
         />
         <img
-          src="assets/img/final-device-2.jpeg"
+          src="assets/img/final-device-2.png"
           alt="second final device image"
           height="10%"
           class="col-6 py-2"
         />
           <img
-          src="assets/img/final-device-3.jpeg"
+          src="assets/img/final-device-3.png"
           alt="third final device image"
           height="25%"
           class="col-6 py-2"
         />
         <img
-          src="assets/img/final-device-4.jpeg"
+          src="assets/img/final-device-4.png"
           alt="forth final device image"
           height="25%"
           class="col-6 py-2"
@@ -679,7 +707,7 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="modal-body d-flex justify-content-start">
+      <div class="modal-body d-flex justify-content-md-center justify-content-start">
         <img
           src="assets/img/poster.jpg"
           alt="poster about the final year project"

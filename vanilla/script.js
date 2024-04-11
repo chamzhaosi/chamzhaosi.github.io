@@ -10,6 +10,23 @@ function isInViewport(element) {
   );
 }
 
+function showContent(){
+  const hidden_span = document.getElementById("hidden-content");
+  const three_dots = document.getElementById("three_dots");
+
+  if ("d-none" === hidden_span.classList[0]){
+    hidden_span.classList.remove('d-none')
+    hidden_span.classList.add('d-inline')
+
+    three_dots.classList.add('d-none')
+  }else{
+    hidden_span.classList.remove('d-inline')
+    hidden_span.classList.add('d-none')
+  }
+
+  console.log("hidden_span")
+}
+
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
