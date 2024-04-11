@@ -240,12 +240,12 @@ section {
 /* columns*/
 
 /* row gaps */
-#education_page > ul li:not(:last-child) {
+#education_page > ul li:not(:last-child):not(.org-ul) {
   margin-bottom: var(--row-gap);
 }
 
 /* card */
-#education_page > ul li {
+#education_page > ul li:not(.org-ul) {
   grid-column: 2;
   --inlineP: 1.5rem;
   margin-inline: var(--inlineP);
@@ -255,7 +255,7 @@ section {
 }
 
 /* date */
-#education_page > ul li .date {
+#education_page > ul li:not(.org-ul) .date {
   --dateH: 3rem;
   height: var(--dateH);
   margin-inline: calc(var(--inlineP) * -1);
@@ -275,7 +275,7 @@ section {
 }
 
 /* date flap */
-#education_page > ul li .date::before {
+#education_page > ul li:not(.org-ul) .date::before {
   content: "";
   width: var(--inlineP);
   aspect-ratio: 1;
@@ -289,7 +289,7 @@ section {
 }
 
 /* circle */
-#education_page > ul li .date::after {
+#education_page > ul li:not(.org-ul) .date::after {
   content: "";
   position: absolute;
   width: 2rem;
@@ -304,27 +304,28 @@ section {
 }
 
 /* title descr */
-#education_page > ul li .title,
-#education_page > ul li .descr {
+#education_page > ul li:not(.org-ul) .title,
+#education_page > ul li:not(.org-ul) .descr {
   background: var(--bgColor);
   position: relative;
   padding-inline: 1.5rem;
 }
-#education_page > ul li .title {
+#education_page > ul li:not(.org-ul) .title {
   overflow: hidden;
   padding-block-start: 1.5rem;
   padding-block-end: 1rem;
   font-weight: 500;
 }
-#education_page > ul li .descr {
+
+#education_page > ul li:not(.org-ul) .descr {
   padding-block-end: 1.5rem;
   font-weight: 800;
   font-size: large;
 }
 
 /* shadows */
-#education_page > ul li .title::before,
-#education_page > ul li .descr::before {
+#education_page > ul li:not(.org-ul) .title::before,
+#education_page > ul li:not(.org-ul) .descr::before {
   content: "";
   position: absolute;
   width: 90%;
@@ -336,13 +337,17 @@ section {
   transform: translate(-50%, 50%);
 }
 
-#education_page > ul li .title::before {
+#education_page > ul li:not(.org-ul) .title::before {
   bottom: calc(100% + 0.125rem);
 }
 
-#education_page > ul li .descr::before {
+#education_page > ul li:not(.org-ul) .descr::before {
   z-index: -1;
   bottom: 0.25rem;
+}
+
+.fs-7{
+  font-size: small;
 }
 
 #skills_and_language_page{
@@ -529,28 +534,28 @@ footer{
   #education_page > ul::before {
     grid-column: 2;
   }
-  #education_page > ul li:nth-child(odd) {
+  #education_page > ul li:nth-child(odd):not(.org-ul) {
     grid-column: 1;
   }
-  #education_page > ul li:nth-child(even) {
+  #education_page > ul li:nth-child(even):not(.org-ul) {
     grid-column: 3;
   }
 
   /* start second card */
-  #education_page > ul li:nth-child(2) {
+  #education_page > ul li:nth-child(2):not(.org-ul) {
     grid-row: 2/4;
   }
 
-  #education_page > ul li:nth-child(odd) .date::before {
+  #education_page > ul li:nth-child(odd):not(.org-ul) .date::before {
     clip-path: polygon(0 0, 100% 0, 100% 100%);
     left: 0;
   }
 
-  #education_page > ul li:nth-child(odd) .date::after {
+  #education_page > ul li:nth-child(odd):not(.org-ul) .date::after {
     transform: translate(-50%, -50%);
     left: calc(100% + var(--col-gap) + var(--line-w) / 2);
   }
-  #education_page > ul li:nth-child(odd) .date {
+  #education_page > ul li:nth-child(odd):not(.org-ul) .date {
     border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
   }
 }
