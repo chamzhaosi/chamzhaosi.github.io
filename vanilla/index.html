@@ -121,7 +121,7 @@
       <!-- Working experience -->
       <div
         id="working_container"
-        class="container-fluid overflow-x-auto d-md-flex d-block text-light p-md-2 p-0 m-md-2 m-0"
+        class="container-fluid overflow-x-auto text-justify d-md-flex d-block text-light p-md-2 p-0 m-md-2 m-0"
       >
         <div
           id="tigaky"
@@ -166,32 +166,42 @@
           id="maco"
           class="d-block col-md-6 col-12 m-md-3 p-md-3 m-3 mx-0 p-2 rounded"
         >
-          <div class="d-flex justify-content-around pb-3 company_name">
+          <div class="d-flex justify-content-around pb-1 company_name">
             <div class="d-block text-center col">
               <h3><a href="https://www.maco.my" target="_blank" class="text-decoration-none text-light">MACO</a></h3>
               <i>(Medical Awareness Camp Outreach)</i>
             </div>
             <h5 class="align-self-center text-center col">2022 ~ Present</h5>
           </div>
+          <p class="fs-7 px-2">Tigaky S/B and MACO have established a cooperative relationship in which Tigaky S/B will assist in refurbishing the donated computers.</p>
           <div class="ps-3 job_descr">
             <h6 class="pb-2">Computer Refurbished</h6>
             <ul>
               <li>
                 <p class="text-wrap fs-6">
                   Refurbished donated PCs, laptops, and other accessories, then donated them to schools in need.
-                  <span class="text-decoration-underline curs-point"> Read More </span>
+                  <span class="text-decoration-underline curs-point"
+                  data-bs-toggle="modal"
+                  data-bs-target="#refurbishedModal"
+                  > Read More </span>
                 </p>
               </li>
               <li>
                 <p class="text-wrap fs-6">
                   Researched and deployed a multiseat (1 PC for 2 Users) computing solution using Ubuntu OS.
-                  <span class="text-decoration-underline curs-point"> Read More </span>
+                  <span class="text-decoration-underline curs-point"
+                  data-bs-toggle="modal"
+                  data-bs-target="#multiseatModal"
+                  > Read More </span>
                 </p>
               </li>
               <li>
                 <p class="text-wrap fs-6">
                   Collected and delivered donated PCs, laptops, and other accessories from donors to schools.
-                  <span class="text-decoration-underline curs-point"> Read More </span>
+                  <span class="text-decoration-underline curs-point"
+                  data-bs-toggle="modal"
+                  data-bs-target="#collectModal"
+                  > Read More </span>
                 </p>
               </li>
               <li>
@@ -567,7 +577,7 @@
   </body>
 </html>
 
-<!-- Modal -->
+<!-- Personal Modal -->
 <div
   class="modal fade"
   id="personalStoryModal"
@@ -595,7 +605,7 @@
   </div>
 </div>
 
-<!-- Modal -->
+<!-- 3D Modeling Modal -->
 <div
   class="modal fade"
   id="3dModelingModal"
@@ -644,7 +654,7 @@
   </div>
 </div>
 
-<!-- Modal -->
+<!-- Final Device Modal -->
 <div
   class="modal fade"
   id="finalDeviceModal"
@@ -693,7 +703,7 @@
   </div>
 </div>
 
-<!-- Modal -->
+<!-- Poster Modal -->
 <div
   class="modal fade"
   id="posterModal"
@@ -724,7 +734,7 @@
   </div>
 </div>
 
-<!-- Modal -->
+<!-- Video Modal -->
 <div
   class="modal fade"
   id="videoModal"
@@ -750,6 +760,114 @@
           height="auto"
           width="85%"
         ></video>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tigaky Modal -->
+
+
+
+
+<!-- MACO Modal -->
+<!-- Refurbished -->
+<div
+  class="modal fade"
+  id="refurbishedModal"
+  tabindex="-1"
+  aria-labelledby="refurbishedModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="refurbishedModalLabel">Repaired Computers and Laptops</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md col-12 me-md-2 mb-2"><img src="assets/img/donate_plan.jpg" width="100%" alt=""></div>
+          <div class="col-md col-12 d-flex align-items-center"><img src="assets/img/5000-donate.jpg" width="100%" alt="group photo with number 5000"></div>
+        </div>
+        <div class="mt-2">
+          <p class="text-justify mx-2">
+            Every Monday through Wednesday, we must prepare all PCs, laptops, and other accessories that have been planned for delivery to primary and secondary schools. Currently, we have donated around 5,500 PCs and laptops to schools. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Multiseat -->
+<div
+  class="modal fade"
+  id="multiseatModal"
+  tabindex="-1"
+  aria-labelledby="multiseatModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="multiseatModalLabel">Multiseat - Ubuntu OS</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md col-12 me-md-2 mb-2"><img src="assets/img/multiseat.jpg" width="100%" alt=""></div>
+          <div class="col-md col-12 d-flex align-items-center"><img src="assets/img/multiseat-2.jpg" width="100%" alt="group photo with number 5000"></div>
+        </div>
+        <div class="mt-2">
+          <p class="text-justify mx-2">
+            To decrease the number of PCs while maintaining the same user base, our team has researched and implemented a multiseat solution on the Ubuntu operating system. We also considered a similar approach for Windows, but unfortunately, we did not find a free solution that met our needs. This system has been deployed in approximately 10 school computer labs, and thus far, only a few have required maintenance. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Collect PC -->
+<div
+  class="modal fade"
+  id="collectModal"
+  tabindex="-1"
+  aria-labelledby="collectModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="collectModalLabel">Collected and Delivered</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md col-12 me-md-2 mb-2"><img src="assets/img/delivery.jpg" width="100%" alt=""></div>
+          <div class="col-md col-12 d-flex justify-content-center"><img src="assets/img/delivery-2.jpg" height="100%" alt="group photo with number 5000"></div>
+        </div>
+        <div class="mt-2">
+          <p class="text-justify mx-2">
+            
+          </p>
+        </div>
       </div>
     </div>
   </div>
