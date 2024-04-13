@@ -137,25 +137,37 @@
               <li>
                 <p class="text-wrap fs-6">
                   Using the Python Flask framework with SQLite to create a frontend for an IP allocation map.
-                  <span class="text-decoration-underline curs-point"> Read More </span>
+                  <span class="text-decoration-underline curs-point"
+                  data-bs-toggle="modal"
+                  data-bs-target="#networkMapModal"
+                  > Read More </span>
                 </p>
               </li>
               <li>
                 <p class="text-wrap fs-6">
                   Using PHP and MySQL to manage a batch of user additions and deletions.
-                  <span class="text-decoration-underline curs-point"> Read More </span>
+                  <span class="text-decoration-underline curs-point"
+                  data-bs-toggle="modal"
+                  data-bs-target="#batchManagementModal"
+                  > Read More </span>
                 </p>
               </li>
               <li>
                 <p class="text-wrap fs-6">
                   Using PHP, MySQL, and a simple mobile app to create a ticketing system.
-                  <span class="text-decoration-underline curs-point"> Read More </span>
+                  <span class="text-decoration-underline curs-point"
+                  data-bs-toggle="modal"
+                  data-bs-target="#ticketingModal"
+                  > Read More </span>
                 </p>
               </li>
               <li>
                 <p class="text-wrap fs-6">
                   Using Python and GStreamer to stream a cropped frame through the RTSP protocol.
-                  <span class="text-decoration-underline curs-point"> Read More </span>
+                  <span class="text-decoration-underline curs-point"
+                  data-bs-toggle="modal"
+                  data-bs-target="#RTSPModal"
+                  > Read More </span>
                 </p>
               </li>
             </ul>
@@ -766,8 +778,149 @@
 </div>
 
 <!-- Tigaky Modal -->
+<!-- Network Map -->
+<div
+  class="modal fade"
+  id="networkMapModal"
+  tabindex="-1"
+  aria-labelledby="networkMapModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="networkMapModalLabel">Network Map</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body d-flex justify-content-center">
+        <div class="row">
+          <div class="col-md col-12 me-md-2 mb-2 d-flex align-items-center"><img src="assets/img/dashboard.png" width="100%" alt=""></div>
+          <div class="col-md col-12 d-flex justify-content-center"><img src="assets/img/dashboard-2.png" width="100%" alt="group photo with number 5000"></div>
+        </div>
+        <div class="mt-2">
+          <p class="text-justify mx-2">
+          
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
+<!-- Batch Management -->
+<div
+  class="modal fade"
+  id="batchManagementModal"
+  tabindex="-1"
+  aria-labelledby="batchManagementModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="batchManagementModalLabel">Batch Management</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body d-flex justify-content-center">
+        <div class="row">
+          <div class="col-md col-12 me-md-2 mb-2 d-flex align-items-center "><img src="assets/img/batch_management.jpg" width="100%" alt=""></div>
+          <div class="col-md col-12">
+            <div class="row">
+              <img src="assets/img/batch_management-1.jpg" width="100%" alt="">
+              <img src="assets/img/batch_management-2.jpg" width="100%" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="mt-2">
+          <p class="text-justify mx-2">
+          
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
+<!-- Ticketing  -->
+<div
+  class="modal fade"
+  id="ticketingModal"
+  tabindex="-1"
+  aria-labelledby="ticketingModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="ticketingModalLabel">Ticketing System</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+        <div class="modal-body d-flex justify-content-center">
+          <video controls
+            src="assets/video/Ticketing.mp4"
+            type="video/mp4"
+            height="auto"
+            width="100%"
+          ></video>
+        </div>
+        <div class="mt-2">
+          <p class="text-justify mx-2">
+          
+          </p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- RTSP  -->
+<div
+  class="modal fade"
+  id="RTSPModal"
+  tabindex="-1"
+  aria-labelledby="RTSPModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="RTSPModalLabel">Real-Time Streaming Protocol</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body d-flex justify-content-center">
+        <div class="row">
+          <div class="col-md col-12 me-md-2 mb-2">
+            <img src="assets/img/cctv.jpeg" width="100%" alt="">
+          </div>
+          <div class="col-md col-12 ">
+            <p class="text-justify mx-2">
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!-- MACO Modal -->
