@@ -1070,6 +1070,9 @@
                   <li>
                     Connect the app to <b>MQTT to monitor and relay Maybank pop-up notification messages</b> to the website.
                   </li>
+                  <li>
+                    <a href="http://">Source Code</a>
+                  </li>
                 </ol>
               </p>
             </div>
@@ -1087,7 +1090,7 @@
   aria-labelledby="RTSPModalLabel"
   aria-hidden="true"
 >
-  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="RTSPModalLabel">Real-Time Streaming Protocol</h1>
@@ -1098,14 +1101,70 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="modal-body d-flex justify-content-center">
+      <div class="modal-body">
         <div class="row">
-          <div class="col-md col-12 me-md-2 mb-2">
-            <img src="assets/img/cctv.jpeg" width="100%" alt="">
+          <div class="col-lg col-12 me-lg-2 mb-2 d-flex align-items-center"><img src="assets/img/cctv.jpeg" width="100%" alt=""></div>
+          <div class="col-lg col-12 d-flex justify-content-center"><img src="assets/img/cctv-1.jpeg" width="100%" alt=""></div>
+        </div>
+        <div class="mt-2 row">
+          <div class="col-lg col-12 me-lg-3 m-0">
+            <p class="mx-2">
+              <b class="fs-5">Problem:</b>
+              <ul class="text-justify">
+                <li>
+                  Most CCTV systems <b>support RTSP (Real-Time Streaming Protocol)</b>.
+                </li>
+                <li>
+                  Due to country-specific policy issues, Xiaomi cameras <b>do not support RTSP</b> for streaming their CCTV footage.
+                </li>
+                <li>
+                  The only method to view footage from Xiaomi cameras is by downloading and installing the  <b><a href="https://www.mi.com/in/product/xiaomi-camera-viewer-app/" target="_blank">Xiaomi Camera Viewer App</a></b>
+                </li>
+                <li>
+                  This <b>limitation prevented the integration</b> of Xiaomi cameras with multi-brand CCTV systems in a unified viewer like Shinobi, an open-source platform
+                </li>
+              </ul>
+            </p>
+            <p class="mx-2">
+              <b class="fs-5">Features and Functions:</b>
+              <ol class="text-justify">
+                <li>
+                  Enable viewing and streaming of Xiaomi CCTV cameras <b>via RTSP</b>.
+                </li>
+              </ol>
+            </p>
           </div>
-          <div class="col-md col-12 ">
-            <p class="text-justify mx-2">
-
+          <div class="col-lg col-12">
+            <p class="mx-2">
+              <b class="fs-5">Solution:</b>
+              <ul class="text-justify">
+                <li>
+                  Utilize the <b>Python OpenCV library</b> to crop a specific view from each frame captured from the Xiaomi Camera Viewer App.
+                </li>
+                <li>
+                  Stream the cropped frames to a viewer using <b>GStreamer</b> via RTSP.
+                </li>
+              </ul>
+            </p>
+            <p class="mx-2">
+              <b class="fs-5">My Task:</b>
+              <ol class="text-justify">
+                <li>
+                  Use the <b>`wine`</b> command to install the Xiaomi Camera Viewer App in a <b>Debian environment</b>, allowing the app to run on a Linux-based system.
+                </li>
+                <li>
+                  <b>Recompile Python</b> to enable support for GStreamer, ensuring that Python can utilize GStreamer for media streaming tasks.
+                </li>
+                <li>
+                  Write a program to <b>configure GStreamer</b> to stream video on a specific port number, setting up the necessary parameters for network streaming.
+                </li>
+                <li>
+                  Code a program that uses the <b>OpenCV library</b> to crop a specific size from each video frame captured by the Xiaomi Camera Viewer App.
+                </li>
+                <li>
+                  Stream the cropped frames using GStreamer, <b>integrating both </b>OpenCV for image processing and GStreamer for media streaming.
+                </li>
+              </ol>
             </p>
           </div>
         </div>
