@@ -170,6 +170,15 @@
                   > Read More </span>
                 </p>
               </li>
+              <li>
+                <p class="text-wrap fs-6">
+                  Using the Python Flask framework, SQLite, and Linux commands, developed a program for HDD data erasure.
+                  <span class="text-decoration-underline curs-point"
+                  data-bs-toggle="modal"
+                  data-bs-target="#eraserModal"
+                  > Read More </span>
+                </p>
+              </li>
             </ul>
           </div>
         </div>
@@ -191,19 +200,19 @@
             <ul>
               <li>
                 <p class="text-wrap fs-6">
-                  Refurbished donated PCs, laptops, and other accessories, then donated them to schools in need.
+                  Researched and deployed a multiseat (1 PC for 2 Users) computing solution using Ubuntu OS.
                   <span class="text-decoration-underline curs-point"
                   data-bs-toggle="modal"
-                  data-bs-target="#refurbishedModal"
+                  data-bs-target="#multiseatModal"
                   > Read More </span>
                 </p>
               </li>
               <li>
                 <p class="text-wrap fs-6">
-                  Researched and deployed a multiseat (1 PC for 2 Users) computing solution using Ubuntu OS.
+                  Refurbished donated PCs, laptops, and other accessories, then donated them to schools in need.
                   <span class="text-decoration-underline curs-point"
                   data-bs-toggle="modal"
-                  data-bs-target="#multiseatModal"
+                  data-bs-target="#refurbishedModal"
                   > Read More </span>
                 </p>
               </li>
@@ -1172,6 +1181,110 @@
     </div>
   </div>
 </div>
+
+<!-- HDD eraser -->
+<div
+  class="modal fade"
+  id="eraserModal"
+  tabindex="-1"
+  aria-labelledby="eraserModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="eraserModalLabel">HDD eraser</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg col-12 me-lg-2 mb-2 d-flex align-items-center"><img src="assets/img/dashboard.png" width="100%" alt="network map"></div>
+          <div class="col-lg col-12 d-flex justify-content-center"><img src="assets/img/dashboard-2.png" width="100%" alt="a IP detail"></div>
+        </div>
+        <div class="mt-2 row">
+          <div class="col-lg col-12 me-lg-3 m-0">
+            <p class="mx-2">
+              <b class="fs-5">Problem:</b>
+              <ul class="text-justify">
+                <li>
+                  <b>Numerous hard drives</b> in our office have been donated by individuals.
+                </li>
+                <li>
+                  Some donors <b>have formatted</b> their HDDs before donation.
+                </li>
+                <li>
+                  It is necessary to ensure data on these HDDs is <b>irrecoverable</b>.
+                </li>
+                <li>
+                  Manually erasing each HDD one-by-one using Linux commands is <b>time-consuming</b>.
+                </li>
+              </ul>
+            </p>
+            <p class="mx-2">
+              <b class="fs-5">Features and Functions:</b>
+              <ol class="text-justify">
+                <li>
+                  Capability to perform erase actions on multiple HDDs <b>simultaneously</b>.
+                </li>
+                <li>
+                  Display <b>estimated time</b> for erasure actions in the UI.
+                </li>
+                <li>
+                  Conduct a <b>SMART test</b> to check the condition of the disk.
+                </li>
+                <li>
+                  Play an <b>audio alert</b> upon completion of erasure tasks.
+                </li>
+                <li>
+                  Print a <b>receipt</b> detailing the HDD information, including processing time, disk status, and other relevant data.
+                </li>
+                
+              </ol>
+            </p>
+          </div>
+          <div class="col-lg col-12">
+            <p class="mx-2">
+              <b class="fs-5">Solution:</b>
+              <ul class="text-justify">
+                <li>
+                  Utilize Linux commands such as <b>`lsblk`</b> to identify the disk, <b>`dd`</b> to erase all data, and <b>`smartctl`</b> to check the status of the disk.
+              </ul>
+            </p>
+            <p class="mx-2">
+              <b class="fs-5">My Task:</b>
+              <ol class="text-justify">
+                <li>
+                  Develop a <b>user interface</b> using the Python Flask framework to <b>display progress and current disk information</b>.
+                </li>
+                <li>
+                  Store all collected data in a database.
+                </li>
+                <li>
+                  Use the <b>`lsblk`</b> command to identify the currently used naming format (e.g., /dev/sda) for the disks.
+                </li>
+                <li>
+                  Automatically execute <b>`lsblk`</b>, <b>`smartctl`</b> and <b>`dd`</b> commands <b>sequentially</b> when an HDD is connected to a docking station.
+                </li>
+                <li>
+                  Configure audio alerts to <b>only play during working days and hours</b>.
+                </li>
+                <li>
+                  <b>Automatically print a receipt</b> detailing process status, disk status, and other relevant information upon task completion.
+                </li>
+              </ol>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 <!-- MACO Modal -->
