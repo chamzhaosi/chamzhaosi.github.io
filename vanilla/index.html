@@ -846,7 +846,7 @@
               </ul>
             </p>
             <p class="mx-2">
-              <b class="fs-5">My Role:</b>
+              <b class="fs-5">My Task:</b>
               <ol class="text-justify">
                 <li>
                   Implement the proof of concept provided by my supervisor, which involves <b>combining various commands</b> to collect comprehensive network information including IP address, MAC address, hostname, manufacturer details, and network connection type.
@@ -945,7 +945,7 @@
               </ul>
             </p>
             <p class="mx-2">
-              <b class="fs-5">My Role:</b>
+              <b class="fs-5">My Task:</b>
               <ol class="text-justify">
                 <li>
                   <b>Display the verification results</b> for the batch of users listed in the Excel file.
@@ -982,7 +982,7 @@
   aria-labelledby="ticketingModalLabel"
   aria-hidden="true"
 >
-  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="ticketingModalLabel">Ticketing System</h1>
@@ -1006,19 +1006,10 @@
                 <b class="fs-5">Problem:</b>
                 <ul class="text-justify">
                   <li>
-                    Many PCs in our office are installed with <b>Debian OS and Proxmox</b> (a virtualization platform).
+                    On February 29, 2024, MACO, an NGO, plans to hold a concert at PJPAC to <b>raise funds</b>.
                   </li>
                   <li>
-                    Each virtual machine in Proxmox is assigned a <b>static IP address</b>.
-                  </li>
-                  <li>
-                    We often face issues determining which IP addresses <b>have not been assigned</b>.
-                  </li>
-                  <li>
-                    Previously, a senior team member used the <b>`ping`</b> or <b>`fping`</b> commands to scan for IP addresses that are not active.
-                  </li>
-                  <li>
-                    A challenge arises in that some IPs may be <b>assigned but the devices are not powered up</b>, leading to inaccurate availability checks.
+                    They have requested assistance in finding a <b>free solution for a payment gateway</b> to process donations and ticket sales.
                   </li>
                 </ul>
               </p>
@@ -1026,10 +1017,16 @@
                 <b class="fs-5">Features and Functions:</b>
                 <ol class="text-justify">
                   <li>
-                    Capability to identify which IP addresses <b>have been assigned</b>.
+                    Allow clients to <b>select a seat</b> and make a payment for the concert.
                   </li>
                   <li>
-                    Ability to use <b>Wake-on-LAN</b> to power on PCs and also to <b>shut them down remotely</b>.
+                    Provide an option for clients to make a <b>donation without selecting a seat</b>. 
+                  </li>
+                  <li>
+                    Allow clients to <b>scan the QR code</b> for payment processing.
+                  </li>
+                  <li>
+                    <b>Send a confirmation email</b> to the client's email address once the payment is successfully processed.
                   </li>
                 </ol>
               </p>
@@ -1039,27 +1036,39 @@
                 <b class="fs-5">Solution:</b>
                 <ul class="text-justify">
                   <li>
-                    Utilize Linux commands such as <b>`tcpdump`</b>, <b>`nmap`</b>, and <b>`ping`</b> to extract the status of each assigned IP address.
+                    Implement payment processing through the <b>Maybank DuitNow QR code system</b>.  
+                  </li>
+                  <li>
+                    Develop a <b>simple mobile app</b> that monitors Maybank app pop-up notifications.
+                  </li>
+                  <li>
+                    Use <b>MQTT (Message Queuing Telemetry Transport)</b> to send the details of these notifications to the associated website.
                   </li>
                 </ul>
               </p>
               <p class="mx-2">
-                <b class="fs-5">My Role:</b>
+                <b class="fs-5">My Task:</b>
                 <ol class="text-justify">
                   <li>
-                    Implement the proof of concept provided by my supervisor, which involves <b>combining various commands</b> to collect comprehensive network information including IP address, MAC address, hostname, manufacturer details, and network connection type.
+                    Develop a <b>client interface</b> using HTML, CSS, JavaScript, and PHP.
                   </li>
                   <li>
-                    Store all the collected data in a database.
+                    Implement a moduler where a chosen seat is <b>locked temporarily</b>.
                   </li>
                   <li>
-                    Use the Python framework <b>Flask</b> along with <b>SQLite</b> to create a frontend that visualizes all the collected network information.
+                    Set a <b>lock duration of 8 minutes or permanently</b>, depending on whether the previous client fails to complete the payment.
                   </li>
                   <li>
-                    Allow users to interact with each IP address through a <b>simple button interface</b>.
+                    Provide a form for clients to fill out their details, including name, email, and importantly, <b>the name of the account used to scan the QR code</b>.
                   </li>
                   <li>
-                    Enable users to view the status of each IP address and <b>execute Wake-on-LAN or shutdown commands</b> with a simple click.
+                    <b>Display bank notifications</b> that match the account name provided by the client at the bottom of the QR code area for user selection.
+                  </li>
+                  <li>
+                    Use Android Studio to <b>develop a mobile app</b>.
+                  </li>
+                  <li>
+                    Connect the app to <b>MQTT to monitor and relay Maybank pop-up notification messages</b> to the website.
                   </li>
                 </ol>
               </p>
