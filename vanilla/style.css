@@ -553,6 +553,18 @@ footer{
   }
 }
 
+@media only screen and (max-width: 992px) {
+  #fy_project {
+    background-image: linear-gradient(
+        to top,
+        rgba(198, 220, 186, 0.6),
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 1)
+      ),
+      url("assets/img/fy-project-bg.jpg");
+  }
+}
+
 @media (min-width: 40rem) {
   #education_page > ul {
     grid-template-columns: 1fr var(--line-w) 1fr;

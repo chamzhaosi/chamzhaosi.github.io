@@ -1,36 +1,12 @@
-// Function to check if a section is in the viewport
-function isInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-function showContent(){
-  const hidden_span = document.getElementById("hidden-content");
-  const three_dots = document.getElementById("three_dots");
-
-  if ("d-none" === hidden_span.classList[0]){
-    hidden_span.classList.remove('d-none')
-    hidden_span.classList.add('d-inline')
-
-    three_dots.classList.add('d-none')
-  }else{
-    hidden_span.classList.remove('d-inline')
-    hidden_span.classList.add('d-none')
-  }
-
-  console.log("hidden_span")
+function pauseVideo(video_id_name){
+  document.getElementById(video_id_name).pause();
 }
 
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+// for word cloud animation.
 async function addAndRemoveClassSequentially(selector, className, delayTime) {
   const elements = document.querySelectorAll(selector);
 
@@ -42,6 +18,8 @@ async function addAndRemoveClassSequentially(selector, className, delayTime) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+
+  // only when the user scoll down start the initial page, then the navigation bar just appear
   window.addEventListener("scroll", function () {
     var scrollPosition = window.scrollY;
     const header = this.document.getElementById("header");
@@ -55,9 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const container = document.getElementById("working_container");
 
+  // When user scroll down in the working experience section, it will become horizontally scroll
   container.addEventListener(
     "wheel",
     function (e) {
+      // if mobile size view, then not need to horizontal scoll
       if (window.innerWidth < 768) {
         return;
       }
@@ -79,13 +59,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
   const sections = document.querySelectorAll("section");
 
-  let lastId;
+  // for store current section id
   let cur = [];
 
+  // when user scoll down the each particular section, the tab on navigation bar should active
   // Listen for scroll events on the window
   window.addEventListener("scroll", (e) => {
     const scrollY = window.scrollY;
 
+    // Calculation current view, and record into a variable cur 
     sections.forEach((section) => {
       const sectionTop = section.offsetTop - 90; // Adjust based on your header size
       const sectionHeight = section.offsetHeight;
@@ -96,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
+    // if the cur equal with the navigation id, then add active class
     navLinks.forEach((link) => {
       link.classList.remove("active");
       if (cur.length && link.getAttribute("href").includes(cur[0])) {
@@ -104,6 +87,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+
+  // For word cloud animation
   // Run at the page is loaded (one time only)
   addAndRemoveClassSequentially("li > span", "span-hover", 500);
 
@@ -111,4 +96,17 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(() => {
     addAndRemoveClassSequentially("li > span", "span-hover", 500);
   }, 12000);
+
+  
+  // Once the video modal is close, the video must be pause
+  const ticketing_video_modal = document.getElementById('ticketingModal');
+  ticketing_video_modal.addEventListener('hidden.bs.modal', function () {
+    pauseVideo('ticketing_video')
+  });
+
+
+  const fyp_video_modal = document.getElementById('videoModal');
+  fyp_video_modal.addEventListener('hidden.bs.modal', function () {
+    pauseVideo('fyp_video')
+  });
 });
