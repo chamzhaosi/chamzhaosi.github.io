@@ -786,7 +786,7 @@
   aria-labelledby="networkMapModalLabel"
   aria-hidden="true"
 >
-  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="networkMapModalLabel">Network Map</h1>
@@ -797,15 +797,75 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="modal-body d-flex justify-content-center">
+      <div class="modal-body">
         <div class="row">
-          <div class="col-md col-12 me-md-2 mb-2 d-flex align-items-center"><img src="assets/img/dashboard.png" width="100%" alt=""></div>
-          <div class="col-md col-12 d-flex justify-content-center"><img src="assets/img/dashboard-2.png" width="100%" alt="group photo with number 5000"></div>
+          <div class="col-lg col-12 me-lg-2 mb-2 d-flex align-items-center"><img src="assets/img/dashboard.png" width="100%" alt=""></div>
+          <div class="col-lg col-12 d-flex justify-content-center"><img src="assets/img/dashboard-2.png" width="100%" alt=""></div>
         </div>
-        <div class="mt-2">
-          <p class="text-justify mx-2">
-          
-          </p>
+        <div class="mt-2 row">
+          <div class="col-lg col-12 me-lg-3 m-0">
+            <p class="mx-2">
+              <b class="fs-5">Problem:</b>
+              <ul class="text-justify">
+                <li>
+                  Many PCs in our office are installed with <b>Debian OS and Proxmox</b> (a virtualization platform).
+                </li>
+                <li>
+                  Each virtual machine in Proxmox is assigned a <b>static IP address</b>.
+                </li>
+                <li>
+                  We often face issues determining which IP addresses <b>have not been assigned</b>.
+                </li>
+                <li>
+                  Previously, a senior team member used the <b>`ping`</b> or <b>`fping`</b> commands to scan for IP addresses that are not active.
+                </li>
+                <li>
+                  A challenge arises in that some IPs may be <b>assigned but the devices are not powered up</b>, leading to inaccurate availability checks.
+                </li>
+              </ul>
+            </p>
+            <p class="mx-2">
+              <b class="fs-5">Features and Functions:</b>
+              <ol class="text-justify">
+                <li>
+                  Capability to identify which IP addresses <b>have been assigned</b>.
+                </li>
+                <li>
+                  Ability to use <b>Wake-on-LAN</b> to power on PCs and also to <b>shut them down remotely</b>.
+                </li>
+              </ol>
+            </p>
+          </div>
+          <div class="col-lg col-12">
+            <p class="mx-2">
+              <b class="fs-5">Solution:</b>
+              <ul class="text-justify">
+                <li>
+                  Utilize Linux commands such as <b>`tcpdump`</b>, <b>`nmap`</b>, and <b>`ping`</b> to extract the status of each assigned IP address.
+                </li>
+              </ul>
+            </p>
+            <p class="mx-2">
+              <b class="fs-5">My Role:</b>
+              <ol class="text-justify">
+                <li>
+                  Implement the proof of concept provided by my supervisor, which involves <b>combining various commands</b> to collect comprehensive network information including IP address, MAC address, hostname, manufacturer details, and network connection type.
+                </li>
+                <li>
+                  Store all the collected data in a database.
+                </li>
+                <li>
+                  Use the Python framework <b>Flask</b> along with <b>SQLite</b> to create a frontend that visualizes all the collected network information.
+                </li>
+                <li>
+                  Allow users to interact with each IP address through a <b>simple button interface</b>.
+                </li>
+                <li>
+                  Enable users to view the status of each IP address and <b>execute Wake-on-LAN or shutdown commands</b> with a simple click.
+                </li>
+              </ol>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -820,7 +880,7 @@
   aria-labelledby="batchManagementModalLabel"
   aria-hidden="true"
 >
-  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="batchManagementModalLabel">Batch Management</h1>
@@ -831,7 +891,7 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="modal-body d-flex justify-content-center">
+      <div class="modal-body">
         <div class="row">
           <div class="col-md col-12 me-md-2 mb-2 d-flex align-items-center "><img src="assets/img/batch_management.jpg" width="100%" alt=""></div>
           <div class="col-md col-12">
@@ -841,10 +901,73 @@
             </div>
           </div>
         </div>
-        <div class="mt-2">
-          <p class="text-justify mx-2">
-          
-          </p>
+        <div class="mt-2 row">
+          <div class="col-lg col-12 me-lg-3 m-0">
+            <p class="mx-2">
+              <b class="fs-5">Problem:</b>
+              <ul class="text-justify">
+                <li>
+                  IReaMail is an <b>open-source mail server</b>.
+                </li>
+                <li>
+                  Allows creation and deletion of individual users.
+                </li>
+                <li>
+                  <b>Does not support batch user management</b> .
+                </li>
+              </ul>
+            </p>
+            <p class="mx-2">
+              <b class="fs-5">Features and Functions:</b>
+              <ol class="text-justify">
+                <li>
+                  Allow a designated user to <b>submit an Excel file</b> containing a list of users (Name and Email).
+                </li>
+                <li>
+                  <b>Check and verify data</b> in the Excel file, including email format, duplicates, and invalid characters.
+                </li>
+                <li>
+                  Enable the <b>creation and configuration of different user profiles</b> for various user batches.
+                </li>
+                <li>
+                  <b>Send email notifications</b> to relevant parties about user creation and deletion activities.
+                </li>
+              </ol>
+            </p>
+          </div>
+          <div class="col-lg col-12">
+            <p class="mx-2">
+              <b class="fs-5">Solution:</b>
+              <ul class="text-justify">
+                <li>
+                  Develop a <b>user interface (UI)</b> that enables users to perform these tasks efficiently.
+                </li>
+              </ul>
+            </p>
+            <p class="mx-2">
+              <b class="fs-5">My Role:</b>
+              <ol class="text-justify">
+                <li>
+                  <b>Display the verification results</b> for the batch of users listed in the Excel file.
+                </li>
+                <li>
+                  <b>Implement pagination</b> for the list of users to enhance navigability.
+                </li>
+                <li>
+                  Design the User Profile and Configuration page in the UI.
+                </li>
+                <li>
+                  Store each User Profile as a <b>JSON file</b> on the server.
+                </li>
+                <li>
+                  <b>Integrate with the IReaMail's database</b> to facilitate the creation and deletion of users.
+                </li>
+                <li>
+                  Once the action is successfully completed, <b>send an email with the Excel file attached</b> to the concerned parties.
+                </li>
+              </ol>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -870,18 +993,78 @@
           aria-label="Close"
         ></button>
       </div>
-        <div class="modal-body d-flex justify-content-center">
+        <div class="modal-body">
           <video controls
-            src="assets/video/Ticketing.mp4"
+            src="assets/video/ticketing.mp4"
             type="video/mp4"
             height="auto"
             width="100%"
           ></video>
-        </div>
-        <div class="mt-2">
-          <p class="text-justify mx-2">
-          
-          </p>
+          <div class="mt-2 row">
+            <div class="col-lg col-12 me-lg-3 m-0">
+              <p class="mx-2">
+                <b class="fs-5">Problem:</b>
+                <ul class="text-justify">
+                  <li>
+                    Many PCs in our office are installed with <b>Debian OS and Proxmox</b> (a virtualization platform).
+                  </li>
+                  <li>
+                    Each virtual machine in Proxmox is assigned a <b>static IP address</b>.
+                  </li>
+                  <li>
+                    We often face issues determining which IP addresses <b>have not been assigned</b>.
+                  </li>
+                  <li>
+                    Previously, a senior team member used the <b>`ping`</b> or <b>`fping`</b> commands to scan for IP addresses that are not active.
+                  </li>
+                  <li>
+                    A challenge arises in that some IPs may be <b>assigned but the devices are not powered up</b>, leading to inaccurate availability checks.
+                  </li>
+                </ul>
+              </p>
+              <p class="mx-2">
+                <b class="fs-5">Features and Functions:</b>
+                <ol class="text-justify">
+                  <li>
+                    Capability to identify which IP addresses <b>have been assigned</b>.
+                  </li>
+                  <li>
+                    Ability to use <b>Wake-on-LAN</b> to power on PCs and also to <b>shut them down remotely</b>.
+                  </li>
+                </ol>
+              </p>
+            </div>
+            <div class="col-lg col-12">
+              <p class="mx-2">
+                <b class="fs-5">Solution:</b>
+                <ul class="text-justify">
+                  <li>
+                    Utilize Linux commands such as <b>`tcpdump`</b>, <b>`nmap`</b>, and <b>`ping`</b> to extract the status of each assigned IP address.
+                  </li>
+                </ul>
+              </p>
+              <p class="mx-2">
+                <b class="fs-5">My Role:</b>
+                <ol class="text-justify">
+                  <li>
+                    Implement the proof of concept provided by my supervisor, which involves <b>combining various commands</b> to collect comprehensive network information including IP address, MAC address, hostname, manufacturer details, and network connection type.
+                  </li>
+                  <li>
+                    Store all the collected data in a database.
+                  </li>
+                  <li>
+                    Use the Python framework <b>Flask</b> along with <b>SQLite</b> to create a frontend that visualizes all the collected network information.
+                  </li>
+                  <li>
+                    Allow users to interact with each IP address through a <b>simple button interface</b>.
+                  </li>
+                  <li>
+                    Enable users to view the status of each IP address and <b>execute Wake-on-LAN or shutdown commands</b> with a simple click.
+                  </li>
+                </ol>
+              </p>
+            </div>
+          </div>
         </div>
     </div>
   </div>
