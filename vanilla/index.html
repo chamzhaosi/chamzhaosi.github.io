@@ -121,7 +121,7 @@
       <!-- Working experience -->
       <div
         id="working_container"
-        class="container-fluid overflow-x-auto text-justify d-md-flex d-block text-light p-md-2 p-0 m-md-2 m-0"
+        class="cur-grab container-fluid overflow-x-auto text-justify d-md-flex d-block text-light p-md-2 p-0 m-md-2 m-0"
       >
         <div
           id="tigaky"
@@ -136,7 +136,7 @@
             <ul>
               <li>
                 <p class="text-wrap fs-6">
-                  Using the Python Flask framework with SQLite to create a frontend for an IP allocation map.
+                  Using the Python Flask framework and SQLite to create a frontend for an IP allocation map, enhancing network visualization and management.
                   <span class="text-decoration-underline curs-point"
                   data-bs-toggle="modal"
                   data-bs-target="#networkMapModal"
@@ -145,7 +145,7 @@
               </li>
               <li>
                 <p class="text-wrap fs-6">
-                  Using PHP and MySQL to manage a batch of user additions and deletions.
+                  Using PHP and MySQL to create a custom UI that manages large-scale user additions and deletions, streamlining the process efficiently.
                   <span class="text-decoration-underline curs-point"
                   data-bs-toggle="modal"
                   data-bs-target="#batchManagementModal"
@@ -154,7 +154,7 @@
               </li>
               <li>
                 <p class="text-wrap fs-6">
-                  Using PHP, MySQL, and a simple mobile app to create a ticketing system.
+                  Using PHP, MySQL, and a simple mobile app to create a ticketing system that replaces traditional payment gateways.
                   <span class="text-decoration-underline curs-point"
                   data-bs-toggle="modal"
                   data-bs-target="#ticketingModal"
@@ -163,7 +163,7 @@
               </li>
               <li>
                 <p class="text-wrap fs-6">
-                  Using Python and GStreamer to stream a cropped frame through the RTSP protocol.
+                  Using Python and GStreamer to stream a cropped frame through the RTSP protocol, enabling integration with various CCTV brands in a unified viewer.
                   <span class="text-decoration-underline curs-point"
                   data-bs-toggle="modal"
                   data-bs-target="#RTSPModal"
@@ -172,7 +172,7 @@
               </li>
               <li>
                 <p class="text-wrap fs-6">
-                  Using the Python Flask framework, SQLite, and Linux commands, developed a program for HDD data erasure.
+                  Using the Python Flask framework, SQLite, and Linux commands to develop a program that systematizes and streamlines the HDD data erasure process.
                   <span class="text-decoration-underline curs-point"
                   data-bs-toggle="modal"
                   data-bs-target="#eraserModal"
@@ -200,7 +200,7 @@
             <ul>
               <li>
                 <p class="text-wrap fs-6">
-                  Researched and deployed a multiseat (1 PC for 2 Users) computing solution using Ubuntu OS.
+                  Researched and deployed a multiseat computing solution using Ubuntu OS, allowing one PC to support two users, maintaining user capacity while reducing the number of PCs consumed..
                   <span class="text-decoration-underline curs-point"
                   data-bs-toggle="modal"
                   data-bs-target="#multiseatModal"
@@ -321,6 +321,9 @@
                     </li>
                     <li>
                       <b>Face recognition</b>  Implemented for facial recognition tasks.
+                    </li>
+                    <li>
+                      <b>WebRTC:</b> Implemented to establish peer-to-peer real-time streaming.
                     </li>
                   </ol> 
                 </p>
@@ -814,7 +817,7 @@
   <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="networkMapModalLabel">Network Map</h1>
+        <h1 class="modal-title fs-5 project-head-font" id="networkMapModalLabel">Network Map</h1>
         <button
           type="button"
           class="btn-close"
@@ -825,13 +828,13 @@
       <div class="modal-body">
         <div class="row">
           <div class="col-lg col-12 me-lg-2 mb-2 d-flex align-items-center"><img src="assets/img/dashboard.png" width="100%" alt="network map"></div>
-          <div class="col-lg col-12 d-flex justify-content-center"><img src="assets/img/dashboard-2.png" width="100%" alt="a IP detail"></div>
+          <div class="col-lg col-12 d-flex justify-content-center"><img src="assets/img/dashboard-2.jpg" width="100%" alt="a IP detail"></div>
         </div>
         <div class="mt-2 row">
-          <div class="col-lg col-12 me-lg-3 m-0">
-            <p class="mx-2">
-              <b class="fs-5">Problem:</b>
-              <ul class="text-justify">
+          <div class="col-lg col-12 me-lg-2 mb-2">
+            <div class="p-3 mb-2 bg-tigaky-card-primary rounded">
+              <b class="fs-5 project-head-font">Problem:</b>
+              <ul class="text-justify project-content-font">
                 <li>
                   Many PCs in our office are installed with <b>Debian OS and Proxmox</b> (a virtualization platform).
                 </li>
@@ -848,10 +851,10 @@
                   A challenge arises in that some IPs may be <b>assigned but the devices are not powered up</b>, leading to inaccurate availability checks.
                 </li>
               </ul>
-            </p>
-            <p class="mx-2">
-              <b class="fs-5">Features and Functions:</b>
-              <ol class="text-justify">
+            </div>
+            <div class="p-3 bg-tigaky-card-secondary rounded">
+              <b class="fs-5 project-head-font">Features and Functions:</b>
+              <ol class="text-justify project-content-font">
                 <li>
                   Capability to identify which IP addresses <b>have been assigned</b>.
                 </li>
@@ -859,20 +862,20 @@
                   Ability to use <b>Wake-on-LAN</b> to power on PCs and also to <b>shut them down remotely</b>.
                 </li>
               </ol>
-            </p>
+            </div>
           </div>
           <div class="col-lg col-12">
-            <p class="mx-2">
-              <b class="fs-5">Solution:</b>
-              <ul class="text-justify">
+            <div class="p-3 mb-2 bg-tigaky-card-third rounded">
+              <b class="fs-5 project-head-font">Solution:</b>
+              <ul class="text-justify project-content-font">
                 <li>
                   Utilize Linux commands such as <b>`tcpdump`</b>, <b>`nmap`</b>, and <b>`ping`</b> to extract the status of each assigned IP address.
                 </li>
               </ul>
-            </p>
-            <p class="mx-2">
-              <b class="fs-5">My Task:</b>
-              <ol class="text-justify">
+            </div>
+            <div class="p-3 bg-tigaky-card-four rounded">
+              <b class="fs-5 project-head-font">My Task:</b>
+              <ol class="text-justify project-content-font">
                 <li>
                   Implement the proof of concept provided by my supervisor, which involves <b>combining various commands</b> to collect comprehensive network information including IP address, MAC address, hostname, manufacturer details, and network connection type.
                 </li>
@@ -889,7 +892,7 @@
                   Enable users to view the status of each IP address and <b>execute Wake-on-LAN or shutdown commands</b> with a simple click.
                 </li>
               </ol>
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -908,7 +911,7 @@
   <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="batchManagementModalLabel">Batch Management</h1>
+        <h1 class="modal-title fs-5 project-head-font" id="batchManagementModalLabel">Batch Management</h1>
         <button
           type="button"
           class="btn-close"
@@ -927,10 +930,10 @@
           </div>
         </div>
         <div class="mt-2 row">
-          <div class="col-lg col-12 me-lg-3 m-0">
-            <p class="mx-2">
-              <b class="fs-5">Problem:</b>
-              <ul class="text-justify">
+          <div class="col-lg col-12 me-lg-2 mb-2">
+            <div class="bg-tigaky-card-primary rounded p-3 mb-2">
+              <b class="fs-5 project-head-font">Problem:</b>
+              <ul class="text-justify project-content-font">
                 <li>
                   IReaMail is an <b>open-source mail server</b>.
                 </li>
@@ -941,10 +944,10 @@
                   <b>Does not support batch user management</b> .
                 </li>
               </ul>
-            </p>
-            <p class="mx-2">
-              <b class="fs-5">Features and Functions:</b>
-              <ol class="text-justify">
+            </div>
+            <div class="bg-tigaky-card-third rounded p-3">
+              <b class="fs-5 project-head-font">Features and Functions:</b>
+              <ol class="text-justify project-content-font">
                 <li>
                   Allow a designated user to <b>submit an Excel file</b> containing a list of users (Name and Email).
                 </li>
@@ -958,20 +961,20 @@
                   <b>Send email notifications</b> to relevant parties about user creation and deletion activities.
                 </li>
               </ol>
-            </p>
+            </div>
           </div>
           <div class="col-lg col-12">
-            <p class="mx-2">
-              <b class="fs-5">Solution:</b>
-              <ul class="text-justify">
+            <div  class="bg-tigaky-card-four rounded p-3 mb-2">
+              <b class="fs-5 project-head-font">Solution:</b>
+              <ul class="text-justify project-content-font">
                 <li>
                   Develop a <b>user interface (UI)</b> that enables users to perform these tasks efficiently.
                 </li>
               </ul>
-            </p>
-            <p class="mx-2">
-              <b class="fs-5">My Task:</b>
-              <ol class="text-justify">
+            </div>
+            <div class="bg-tigaky-card-secondary rounded p-3">
+              <b class="fs-5 project-head-font">My Task:</b>
+              <ol class="text-justify project-content-font">
                 <li>
                   <b>Display the verification results</b> for the batch of users listed in the Excel file.
                 </li>
@@ -991,7 +994,7 @@
                   Once the action is successfully completed, <b>send an email with the Excel file attached</b> to the concerned parties.
                 </li>
               </ol>
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -1010,7 +1013,7 @@
   <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="ticketingModalLabel">Ticketing System</h1>
+        <h1 class="modal-title fs-5 project-head-font" id="ticketingModalLabel">Ticketing System</h1>
         <button
           type="button"
           class="btn-close"
@@ -1026,10 +1029,10 @@
             width="100%"
           ></video>
           <div class="mt-2 row">
-            <div class="col-lg col-12 me-lg-3 m-0">
-              <p class="mx-2">
-                <b class="fs-5">Problem:</b>
-                <ul class="text-justify">
+            <div class="col-lg col-12 me-lg-2 mb-2">
+              <div class="bg-tigaky-card-four rounded p-3 mb-2">
+                <b class="fs-5 project-head-font">Problem:</b>
+                <ul class="text-justify project-content-font">
                   <li>
                     On February 29, 2024, MACO, an NGO, plans to hold a concert at PJPAC to <b>raise funds</b>.
                   </li>
@@ -1037,10 +1040,10 @@
                     They have requested assistance in finding a <b>free solution for a payment gateway</b> to process donations and ticket sales.
                   </li>
                 </ul>
-              </p>
-              <p class="mx-2">
-                <b class="fs-5">Features and Functions:</b>
-                <ol class="text-justify">
+              </div>
+              <div class="bg-tigaky-card-third rounded p-3">
+                <b class="fs-5 project-head-font">Features and Functions:</b>
+                <ol class="text-justify project-content-font">
                   <li>
                     Allow clients to <b>select a seat</b> and make a payment for the concert.
                   </li>
@@ -1054,12 +1057,12 @@
                     <b>Send a confirmation email</b> to the client's email address once the payment is successfully processed.
                   </li>
                 </ol>
-              </p>
+              </div>
             </div>
             <div class="col-lg col-12">
-              <p class="mx-2">
-                <b class="fs-5">Solution:</b>
-                <ul class="text-justify">
+              <div class="bg-tigaky-card-secondary rounded p-3 mb-2">
+                <b class="fs-5 project-head-font">Solution:</b>
+                <ul class="text-justify project-content-font">
                   <li>
                     Implement payment processing through the <b>Maybank DuitNow QR code system</b>.  
                   </li>
@@ -1070,10 +1073,10 @@
                     Use <b>MQTT (Message Queuing Telemetry Transport)</b> to send the details of these notifications to the associated website.
                   </li>
                 </ul>
-              </p>
-              <p class="mx-2">
-                <b class="fs-5">My Task:</b>
-                <ol class="text-justify">
+              </div>
+              <div class="bg-tigaky-card-primary rounded p-3">
+                <b class="fs-5 project-head-font">My Task:</b>
+                <ol class="text-justify project-content-font">
                   <li>
                     Develop a <b>client interface</b> using HTML, CSS, JavaScript, and PHP.
                   </li>
@@ -1099,7 +1102,7 @@
                     <a href="https://github.com/chamzhaosi/ticketing" target="_blank">Source Code</a>
                   </li>
                 </ol>
-              </p>
+              </div>
             </div>
           </div>
         </div>
@@ -1132,10 +1135,10 @@
           <div class="col-lg col-12 d-flex justify-content-center"><img src="assets/img/cctv-1.jpeg" width="100%" alt="xiaomi camera viewer app"></div>
         </div>
         <div class="mt-2 row">
-          <div class="col-lg col-12 me-lg-3 m-0">
-            <p class="mx-2">
-              <b class="fs-5">Problem:</b>
-              <ul class="text-justify">
+          <div class="col-lg col-12  me-lg-2 mb-2">
+            <div class="bg-tigaky-card-third rounded p-3 mb-2">
+              <b class="fs-5 project-head-font">Problem:</b>
+              <ul class="text-justify project-content-font">
                 <li>
                   Most CCTV systems <b>support RTSP (Real-Time Streaming Protocol)</b>.
                 </li>
@@ -1149,20 +1152,20 @@
                   This <b>limitation prevented the integration</b> of Xiaomi cameras with multi-brand CCTV systems in a unified viewer like Shinobi, an open-source platform
                 </li>
               </ul>
-            </p>
-            <p class="mx-2">
-              <b class="fs-5">Features and Functions:</b>
-              <ol class="text-justify">
+            </div>
+            <div class="bg-tigaky-card-primary rounded  p-3">
+              <b class="fs-5 project-head-font">Features and Functions:</b>
+              <ol class="text-justify project-content-font">
                 <li>
                   Enable viewing and streaming of Xiaomi CCTV cameras <b>via RTSP</b>.
                 </li>
               </ol>
-            </p>
+            </div>
           </div>
           <div class="col-lg col-12">
-            <p class="mx-2">
-              <b class="fs-5">Solution:</b>
-              <ul class="text-justify">
+             <div class="bg-tigaky-card-four rounded p-3 mb-2">
+              <b class="fs-5 project-head-font">Solution:</b>
+              <ul class="text-justify project-content-font">
                 <li>
                   Utilize the <b>Python OpenCV library</b> to crop a specific view from each frame captured from the Xiaomi Camera Viewer App.
                 </li>
@@ -1170,27 +1173,27 @@
                   Stream the cropped frames to a viewer using <b>GStreamer</b> via RTSP.
                 </li>
               </ul>
-            </p>
-            <p class="mx-2">
-              <b class="fs-5">My Task:</b>
-              <ol class="text-justify">
-                <li>
-                  Use the <b>`wine`</b> command to install the Xiaomi Camera Viewer App in a <b>Debian environment</b>, allowing the app to run on a Linux-based system.
-                </li>
-                <li>
-                  <b>Recompile Python</b> to enable support for GStreamer, ensuring that Python can utilize GStreamer for media streaming tasks.
-                </li>
-                <li>
-                  Write a program to <b>configure GStreamer</b> to stream video on a specific port number, setting up the necessary parameters for network streaming.
-                </li>
-                <li>
-                  Code a program that uses the <b>OpenCV library</b> to crop a specific size from each video frame captured by the Xiaomi Camera Viewer App.
-                </li>
-                <li>
-                  Stream the cropped frames using GStreamer, <b>integrating both </b>OpenCV for image processing and GStreamer for media streaming.
-                </li>
-              </ol>
-            </p>
+             </div>
+              <div class="bg-tigaky-card-secondary rounded p-3">
+                <b class="fs-5 project-head-font">My Task:</b>
+                <ol class="text-justify project-content-font">
+                  <li>
+                    Use the <b>`wine`</b> command to install the Xiaomi Camera Viewer App in a <b>Debian environment</b>, allowing the app to run on a Linux-based system.
+                  </li>
+                  <li>
+                    <b>Recompile Python</b> to enable support for GStreamer, ensuring that Python can utilize GStreamer for media streaming tasks.
+                  </li>
+                  <li>
+                    Write a program to <b>configure GStreamer</b> to stream video on a specific port number, setting up the necessary parameters for network streaming.
+                  </li>
+                  <li>
+                    Code a program that uses the <b>OpenCV library</b> to crop a specific size from each video frame captured by the Xiaomi Camera Viewer App.
+                  </li>
+                  <li>
+                    Stream the cropped frames using GStreamer, <b>integrating both </b>OpenCV for image processing and GStreamer for media streaming.
+                  </li>
+                </ol>
+              </div>
           </div>
         </div>
       </div>
@@ -1209,7 +1212,7 @@
   <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="eraserModalLabel">HDD eraser</h1>
+        <h1 class="modal-title fs-5 project-head-font" id="eraserModalLabel">HDD eraser</h1>
         <button
           type="button"
           class="btn-close"
@@ -1220,80 +1223,79 @@
       <div class="modal-body">
         <div class="row">
           <div class="col-lg col-12 me-lg-2 mb-2 d-flex align-items-center"><img src="assets/img/dashboard.png" width="100%" alt="network map"></div>
-          <div class="col-lg col-12 d-flex justify-content-center"><img src="assets/img/dashboard-2.png" width="100%" alt="a IP detail"></div>
+          <div class="col-lg col-12 d-flex justify-content-center"><img src="assets/img/dashboard-2.jpg" width="100%" alt="a IP detail"></div>
         </div>
         <div class="mt-2 row">
-          <div class="col-lg col-12 me-lg-3 m-0">
-            <p class="mx-2">
-              <b class="fs-5">Problem:</b>
-              <ul class="text-justify">
-                <li>
-                  <b>Numerous hard drives</b> in our office have been donated by individuals.
-                </li>
-                <li>
-                  Some donors <b>have formatted</b> their HDDs before donation.
-                </li>
-                <li>
-                  It is necessary to ensure data on these HDDs is <b>irrecoverable</b>.
-                </li>
-                <li>
-                  Manually erasing each HDD one-by-one using Linux commands is <b>time-consuming</b>.
-                </li>
-              </ul>
-            </p>
-            <p class="mx-2">
-              <b class="fs-5">Features and Functions:</b>
-              <ol class="text-justify">
-                <li>
-                  Capability to perform erase actions on multiple HDDs <b>simultaneously</b>.
-                </li>
-                <li>
-                  Display <b>estimated time</b> for erasure actions in the UI.
-                </li>
-                <li>
-                  Conduct a <b>SMART test</b> to check the condition of the disk.
-                </li>
-                <li>
-                  Play an <b>audio alert</b> upon completion of erasure tasks.
-                </li>
-                <li>
-                  Print a <b>receipt</b> detailing the HDD information, including processing time, disk status, and other relevant data.
-                </li>
-                
-              </ol>
-            </p>
+          <div class="col-lg col-12 me-lg-2 mb-2">
+              <div class="bg-tigaky-card-secondary rounded p-3 mb-2">
+                <b class="fs-5 project-head-font">Problem:</b>
+                <ul class="text-justify project-content-font">
+                  <li>
+                    <b>Numerous hard drives</b> in our office have been donated by individuals.
+                  </li>
+                  <li>
+                    Some donors <b>have formatted</b> their HDDs before donation.
+                  </li>
+                  <li>
+                    It is necessary to ensure data on these HDDs is <b>irrecoverable</b>.
+                  </li>
+                  <li>
+                    Manually erasing each HDD one-by-one using Linux commands is <b>time-consuming</b>.
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-tigaky-card-primary rounded p-3">
+                <b class="fs-5 project-head-font">Features and Functions:</b>
+                <ol class="text-justify project-content-font">
+                  <li>
+                    Capability to perform erase actions on multiple HDDs <b>simultaneously</b>.
+                  </li>
+                  <li>
+                    Display <b>estimated time</b> for erasure actions in the UI.
+                  </li>
+                  <li>
+                    Conduct a <b>SMART test</b> to check the condition of the disk.
+                  </li>
+                  <li>
+                    Play an <b>audio alert</b> upon completion of erasure tasks.
+                  </li>
+                  <li>
+                    Print a <b>receipt</b> detailing the HDD information, including processing time, disk status, and other relevant data.
+                  </li>
+                </ol>
+              </div>
           </div>
           <div class="col-lg col-12">
-            <p class="mx-2">
-              <b class="fs-5">Solution:</b>
-              <ul class="text-justify">
-                <li>
-                  Utilize Linux commands such as <b>`lsblk`</b> to identify the disk, <b>`dd`</b> to erase all data, and <b>`smartctl`</b> to check the status of the disk.
-              </ul>
-            </p>
-            <p class="mx-2">
-              <b class="fs-5">My Task:</b>
-              <ol class="text-justify">
-                <li>
-                  Develop a <b>user interface</b> using the Python Flask framework to <b>display progress and current disk information</b>.
-                </li>
-                <li>
-                  Store all collected data in a database.
-                </li>
-                <li>
-                  Use the <b>`lsblk`</b> command to identify the currently used naming format (e.g., /dev/sda) for the disks.
-                </li>
-                <li>
-                  Automatically execute <b>`lsblk`</b>, <b>`smartctl`</b> and <b>`dd`</b> commands <b>sequentially</b> when an HDD is connected to a docking station.
-                </li>
-                <li>
-                  Configure audio alerts to <b>only play during working days and hours</b>.
-                </li>
-                <li>
-                  <b>Automatically print a receipt</b> detailing process status, disk status, and other relevant information upon task completion.
-                </li>
-              </ol>
-            </p>
+              <div class="bg-tigaky-card-four rounded p-3 mb-2">
+                <b class="fs-5 project-head-font">Solution:</b>
+                <ul class="text-justify project-content-font">
+                  <li>
+                    Utilize Linux commands such as <b>`lsblk`</b> to identify the disk, <b>`dd`</b> to erase all data, and <b>`smartctl`</b> to check the status of the disk.
+                </ul>
+              </div>
+              <div class="bg-tigaky-card-third rounded p-3">
+                <b class="fs-5 project-head-font">My Task:</b>
+                <ol class="text-justify project-content-font">
+                  <li>
+                    Develop a <b>user interface</b> using the Python Flask framework to <b>display progress and current disk information</b>.
+                  </li>
+                  <li>
+                    Store all collected data in a database.
+                  </li>
+                  <li>
+                    Use the <b>`lsblk`</b> command to identify the currently used naming format (e.g., /dev/sda) for the disks.
+                  </li>
+                  <li>
+                    Automatically execute <b>`lsblk`</b>, <b>`smartctl`</b> and <b>`dd`</b> commands <b>sequentially</b> when an HDD is connected to a docking station.
+                  </li>
+                  <li>
+                    Configure audio alerts to <b>only play during working days and hours</b>.
+                  </li>
+                  <li>
+                    <b>Automatically print a receipt</b> detailing process status, disk status, and other relevant information upon task completion.
+                  </li>
+                </ol>
+              </div>
           </div>
         </div>
       </div>
@@ -1315,7 +1317,7 @@
   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="refurbishedModalLabel">Repaired Computers and Laptops</h1>
+        <h1 class="modal-title fs-5 project-head-font" id="refurbishedModalLabel">Repaired Computers and Laptops</h1>
         <button
           type="button"
           class="btn-close"
@@ -1328,9 +1330,9 @@
           <div class="col-lg col-12 me-lg-2 mb-2"><img src="assets/img/donate_plan.jpg" width="100%" alt="weekly plan"></div>
           <div class="col-lg col-12 d-flex align-items-center"><img src="assets/img/5000-donate.jpg" width="100%" alt="group photo with number 5000"></div>
         </div>
-        <div class="mt-2">
-          <p class="text-justify mx-2">
-            Every Monday through Wednesday, we must prepare all PCs, laptops, and other accessories that have been planned for delivery to primary and secondary schools. Currently, we have donated around 5,500 PCs and laptops to schools. 
+        <div class="mt-2 p-2 bg-tigaky-card-four rounded">
+          <p class="text-justify mx-2 project-content-font">
+            Every <b>Monday through Wednesday</b>, we must <b>prepare all PCs, laptops, and other accessories</b> that have been planned for delivery to primary and secondary schools. Currently, we have donated around <b>5,500 PCs and laptops</b> to schools. 
           </p>
         </div>
       </div>
@@ -1349,7 +1351,7 @@
   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="multiseatModalLabel">Multiseat - Ubuntu OS</h1>
+        <h1 class="modal-title fs-5 project-head-font" id="multiseatModalLabel">Multiseat - Ubuntu OS</h1>
         <button
           type="button"
           class="btn-close"
@@ -1362,9 +1364,9 @@
           <div class="col-lg col-12 me-lg-2 mb-2"><img src="assets/img/multiseat.jpg" width="100%" alt="R&D multiseat"></div>
           <div class="col-lg col-12 d-flex align-items-center"><img src="assets/img/multiseat-2.jpg" width="100%" alt="deployed multiseat in a school"></div>
         </div>
-        <div class="mt-2">
-          <p class="text-justify mx-2">
-            To decrease the number of PCs while maintaining the same user base, our team has researched and implemented a multiseat solution on the Ubuntu operating system. We also considered a similar approach for Windows, but unfortunately, we did not find a free solution that met our needs. This system has been deployed in approximately 10 school computer labs, and thus far, only a few have required maintenance. 
+        <div class="mt-2 p-2 bg-tigaky-card-primary rounded">
+          <p class="text-justify mx-2 project-content-font">
+            To <b>decrease the number of PCs</b> while <b>maintaining the same user base</b>, our team has researched and implemented a <b> multiseat solution</b> on the Ubuntu operating system. We also considered a similar approach for Windows, <b>but unfortunately, we did not find a free solution</b> that met our needs. This system has been deployed in <b>approximately 10 school computer labs</b>, and thus far, only a <b>few have required maintenance</b>. 
           </p>
         </div>
       </div>
@@ -1383,7 +1385,7 @@
   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="collectModalLabel">Collected and Delivered</h1>
+        <h1 class="modal-title fs-5 project-head-font" id="collectModalLabel">Collected and Delivered</h1>
         <button
           type="button"
           class="btn-close"
@@ -1396,9 +1398,9 @@
           <div class="col-lg col-12 me-lg-2 mb-2"><img src="assets/img/delivery.jpg" width="100%" alt="collect danated pcs and laptops"></div>
           <div class="col-lg col-12 d-flex justify-content-center"><img src="assets/img/delivery-2.jpg" height="100%" alt="pcs and laptops deliver to school"></div>
         </div>
-        <div class="mt-2">
-          <p class="text-justify mx-2">
-            Sometimes we have to go to the company that wants to donate PCs and other accessories, collect them, and transfer them to another volunteer's lorry. Then, we have to deliver the refurbished PC items to the schools that need them.
+        <div class="mt-2 p-2 bg-tigaky-card-third rounded">
+          <p class="text-justify mx-2 project-content-font">
+            Sometimes we have to go to the company that wants to donate PCs and other accessories, <b>collect </b>them, and transfer them to another volunteer's lorry. Then, we have to <b>deliver</b> the refurbished PC items to the schools that need them.
           </p>
         </div>
       </div>
