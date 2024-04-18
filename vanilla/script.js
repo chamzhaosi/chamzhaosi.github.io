@@ -69,12 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollLeft = container.scrollLeft;
   });
 
-  container.addEventListener("mouseleave", () => {
-    isDown = false;
-    container.classList.add('cur-grab')
-    container.classList.remove('cur-grabbing')
-  });
-
   container.addEventListener("mouseup", () => {
     isDown = false;
     container.classList.add('cur-grab')
