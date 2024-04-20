@@ -32,9 +32,12 @@ section {
   /* background:linear-gradient(0deg, rgba(255, 179, 142, 0.8), rgba(254, 199, 180, 0.5)), url("assets/img/initial-bg.avif"); */
   background: conic-gradient(
       from 250deg,
-      rgba(148, 78, 99, 0.2),
       rgba(255, 179, 142, 0.5),
-      rgba(254, 199, 180, 0.3)
+      /* rgba(148, 78, 99, 0.8), */
+      rgba(112, 75, 104, 0.5),
+      /* rgba(46, 42, 45, 0.9),
+      rgba(46, 42, 45, 0.9), */
+      rgba(254, 199, 180, 0.5)
     ),
     url("assets/img/initial-bg.avif");
   /* background-image: url("assets/img/initial-bg.avif"); */
@@ -555,11 +558,6 @@ footer{
 }
 
 @media only screen and (max-width: 576px) {
-  /* For mobile phones: */
-  #initial_page {
-    height: 100% !important;
-  }
-
   #working_container {
     overflow-x: hidden !important;
   }
@@ -573,6 +571,18 @@ footer{
 }
 
 @media only screen and (max-width: 768px) {
+  #personal_img{
+    content:url("assets/img/personal-1.png");
+    height: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+   /* For mobile phones: */
+  #initial_page {
+    height: 100% !important;
+  }
+
   /* For mobile phones: */
   .gallery {
     --s: 80px; /* control the size */
