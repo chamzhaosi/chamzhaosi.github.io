@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let startX;
   let scrollLeft;
 
-  container.addEventListener("mousedown", (e) => {
+  container.addEventListener("mousedown", (e) => { 
     isDown = true;
     container.classList.remove('cur-grab')
     container.classList.add('cur-grabbing')
