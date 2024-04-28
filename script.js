@@ -10,10 +10,13 @@ function delay(ms) {
 async function addAndRemoveClassSequentially(selector, className, delayTime) {
   const elements = document.querySelectorAll(selector);
 
-  for (let element of elements) {
-    element.classList.add(className);
-    await delay(delayTime);
-    element.classList.remove(className);
+  // Instead using the setInterval, while is the best alternative
+  while (true){
+    for (let element of elements) {
+      element.classList.add(className);
+      await delay(delayTime);
+      element.classList.remove(className);
+    }
   }
 }
 
@@ -120,9 +123,9 @@ document.addEventListener("DOMContentLoaded", function () {
   addAndRemoveClassSequentially("li > span", "span-hover", 500);
 
   // Every 10 second run one time
-  setInterval(() => {
-    addAndRemoveClassSequentially("li > span", "span-hover", 500);
-  }, 12000);
+  // setInterval(() => {
+  //   addAndRemoveClassSequentially("li > span", "span-hover", 500);
+  // }, 12000);
 
   // Once the video modal is close, the video must be pause
   const ticketing_video_modal = document.getElementById("ticketingModal");
