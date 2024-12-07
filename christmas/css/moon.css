@@ -1,0 +1,23 @@
+/* Moon styling */
+.moon {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 30% 30%, #ffffcc, #ffd700 60%, #ffcc00);
+  border-radius: 50%;
+  animation: glow 3s infinite alternate;
+  transition: width var(--minItem_time) ease, height var(--minItem_time) ease,
+    transform var(--minItem_time) ease;
+}
+
+/* Animation for changing opacity */
+@keyframes glow {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}

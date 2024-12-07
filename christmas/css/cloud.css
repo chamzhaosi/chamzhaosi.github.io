@@ -1,0 +1,43 @@
+.cloud {
+  position: absolute;
+  top: 10%;
+  width: var(--size, 60px); /* Default size if --size is not provided */
+  height: calc(var(--size, 60px) * 0.6); /* Height based on width proportion */
+  background: #f5f0f0;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  animation: moveClouds 30s linear infinite;
+  transition: width var(--minItem_time) ease, height var(--minItem_time) ease,
+    left var(--minItem_time) ease;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: #e0dede;
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: var(--size-before, 90px); /* Use --size-before set dynamically */
+  height: var(--size-before, 90px);
+  top: calc(var(--size-before, 90px) * -0.4); /* Adjust based on size */
+  left: calc(var(--size-before, 90px) * 0.1);
+}
+
+.cloud::after {
+  width: var(--size-after, 110px); /* Use --size-after set dynamically */
+  height: var(--size-after, 110px);
+  top: calc(var(--size-after, 110px) * -0.3);
+  right: calc(var(--size-after, 110px) * 0.1);
+}
+
+@keyframes moveClouds {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}

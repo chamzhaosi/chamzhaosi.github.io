@@ -1,0 +1,29 @@
+.snowflake {
+  position: absolute;
+  top: -10px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear infinite, sway ease-in-out infinite;
+}
+
+/* Falling animation */
+@keyframes fall {
+  0% {
+    top: -10px;
+  }
+  100% {
+    top: 100vh;
+  }
+}
+
+/* Swaying animation */
+@keyframes sway {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}

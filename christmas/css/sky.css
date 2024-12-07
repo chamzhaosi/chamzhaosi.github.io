@@ -1,0 +1,7 @@
+.sky {
+  margin: 0;
+  background: radial-gradient(circle, #1a1a2e, #16213e);
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}

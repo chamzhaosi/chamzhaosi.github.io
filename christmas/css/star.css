@@ -1,0 +1,50 @@
+/* Container for stats */
+.stars-row {
+  display: flex;
+  gap: 10px;
+  margin: 5px;
+}
+
+/* Individual stat */
+.starOne {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: yellow;
+  animation: blink 1.5s infinite;
+}
+
+.starTwo {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: yellow;
+  animation: blink 3s infinite;
+}
+
+.starThree {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: yellow;
+  animation: blink 2.5s infinite;
+}
+
+.starFour {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: yellow;
+  animation: blink 5s infinite;
+}
+
+/* Blinking animation */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

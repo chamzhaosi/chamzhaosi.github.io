@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/sky.css" />
+    <link rel="stylesheet" href="./css/constant.css" />
+    <link rel="stylesheet" href="./css/star.css" />
+    <link rel="stylesheet" href="./css/moon.css" />
+    <link rel="stylesheet" href="./css/snow.css" />
+    <link rel="stylesheet" href="./css/cloud.css" />
+  </head>
+  <body class="sky">
+    <div class="moon absolute m-5"></div>
+    <div class="flex w-full">
+      <div
+        id="sky_star_container1"
+        class="w-1/2 transition-opacity duration-1000 ease-in-out opacity-1"
+      ></div>
+      <div
+        id="sky_star_container2"
+        class="w-1/2 transition-opacity duration-1000 ease-in-out opacity-1"
+      ></div>
+    </div>
+
+    <script src="./js/star.js"></script>
+    <script src="./js/snow.js"></script>
+    <script src="./js/cloud.js"></script>
+    <script src="./js/minItem.js"></script>
+  </body>
+</html>
