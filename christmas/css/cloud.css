@@ -24,6 +24,7 @@
   height: var(--size-before, 90px);
   top: calc(var(--size-before, 90px) * -0.4); /* Adjust based on size */
   left: calc(var(--size-before, 90px) * 0.1);
+  transition: width var(--minItem_time) ease, height var(--minItem_time) ease;
 }
 
 .cloud::after {
@@ -31,6 +32,7 @@
   height: var(--size-after, 110px);
   top: calc(var(--size-after, 110px) * -0.3);
   right: calc(var(--size-after, 110px) * 0.1);
+  transition: width var(--minItem_time) ease, height var(--minItem_time) ease;
 }
 
 @keyframes moveClouds {

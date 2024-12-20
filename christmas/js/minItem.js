@@ -34,20 +34,25 @@ const minRemoveMoon = () => {
 };
 minRemoveMoon();
 
-const minRemoveStart = () => {
+const minRemoveStar = () => {
   setTimeout(() => {
     const startOneContainer = document.getElementById("sky_star_container1");
-    startOneContainer.style.opacity = 0;
+    startOneContainer.style.opacity = 0.5;
 
     const startTwoContainer = document.getElementById("sky_star_container2");
     startTwoContainer.style.opacity = 0.5;
 
-    for (let i = 0; i < 4; i++) {
-      const lastChild = startTwoContainer.lastElementChild;
-      if (lastChild) {
-        startTwoContainer.removeChild(lastChild);
+    for (let i = 0; i < 8; i++) {
+      const lastOneChild = startOneContainer.lastElementChild;
+      if (lastOneChild) {
+        startOneContainer.removeChild(lastOneChild);
+      }
+
+      const lastTwoChild = startTwoContainer.lastElementChild;
+      if (i % 3 === 0 && lastTwoChild) {
+        startTwoContainer.removeChild(lastTwoChild);
       }
     }
   }, [TIME_OUT]);
 };
-minRemoveStart();
+minRemoveStar();

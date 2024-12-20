@@ -1,0 +1,140 @@
+#tree_container {
+  position: absolute;
+  display: flex;
+  bottom: 30%;
+  /* translate: 0 80vh; */
+  transition: translate var(--minItem_time) ease;
+}
+
+.tree {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+
+.star {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #ffe380;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  top: -10%;
+  z-index: 6;
+}
+
+.layer {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent;
+  border-radius: 15px; /* Rounded edges for smooth layers */
+}
+
+.layer1 {
+  border-width: 0 80px 80px 80px;
+  border-color: transparent transparent #6a5acd transparent; /* Purple */
+  margin-bottom: -30px;
+  z-index: 4;
+}
+
+.layer2 {
+  border-width: 0 100px 100px 100px;
+  border-color: transparent transparent #32cd32 transparent; /* Lime green */
+  margin-bottom: -30px;
+  z-index: 3;
+}
+
+.layer3 {
+  border-width: 0 120px 120px 120px;
+  border-color: transparent transparent #ff6347 transparent; /* Tomato red */
+  margin-bottom: -30px;
+  z-index: 2;
+}
+
+.trunk {
+  width: 40px;
+  height: 60px;
+  background: #8b4513; /* Brown trunk */
+  border-radius: 5px;
+  margin-top: -5px;
+  z-index: 1;
+}
+
+/* tree 2 */
+
+.star2 {
+  background: #faab00;
+}
+
+.tree2 {
+  top: 28vh;
+  left: -8vw;
+  z-index: 20;
+}
+
+.tree2 .layer1 {
+  border-color: transparent transparent #a6e319 transparent; /* Purple */
+  border-width: 0 50px 50px 50px;
+}
+
+.tree2 .layer2 {
+  border-color: transparent transparent #11b83a transparent; /* Purple */
+  border-width: 0 60px 60px 60px;
+}
+
+.tree2 .layer3 {
+  border-color: transparent transparent #0f872c transparent; /* Purple */
+  border-width: 0 70px 70px 70px;
+}
+
+/* tree 3 */
+.tree3 {
+  top: 12vh;
+  left: -15vw;
+  z-index: 10;
+}
+
+.star3 {
+  background: #e6e607;
+}
+
+.tree3 .layer1 {
+  border-color: transparent transparent #ed8840 transparent; /* Purple */
+  border-width: 0 60px 60px 60px;
+}
+
+.tree3 .layer2 {
+  border-color: transparent transparent #a68719 transparent; /* Purple */
+  border-width: 0 80px 80px 80px;
+}
+
+.tree3 .layer3 {
+  border-color: transparent transparent #798513 transparent; /* Purple */
+  border-width: 0 100px 100px 100px;
+}
+
+@media (min-width: 1500px) {
+  .tree2 {
+    top: 18vh;
+    left: -5vw;
+  }
+
+  .tree3 {
+    top: 8vh;
+    left: -10vw;
+  }
+}
