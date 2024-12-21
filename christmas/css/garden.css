@@ -1,7 +1,7 @@
 #garden {
   width: 100vw;
   height: 8vh;
-  /* translate: 0 35vh; */
+  translate: 0 35vh;
   background-color: #11802e;
   transition: translate var(--minItem_time) ease;
 }

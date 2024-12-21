@@ -2,7 +2,7 @@
   position: absolute;
   display: flex;
   bottom: 30%;
-  /* translate: 0 80vh; */
+  translate: 0 80vh;
   transition: translate var(--minItem_time) ease;
 }
 

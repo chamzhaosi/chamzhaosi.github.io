@@ -24,7 +24,7 @@ function updateBackground(
   backgroundSizeList,
   backgroundImageList
 ) {
-  if (backgroundSizeList.length > 15) return;
+  if (backgroundSizeList.length > 20) return;
 
   const circleX = getRandomPositionWithBias();
   const circleY = getRandomPositionWithBias();
@@ -42,7 +42,6 @@ function updateBackground(
   const backgroundRepeat =
     Array(backgroundSizeList.length).fill("repeat").join(", ") + `, no-repeat`;
 
-  console.log(backgroundImageList.length);
   // Apply the CSS to the element
   element.style.backgroundImage = backgroundImage;
   element.style.backgroundRepeat = backgroundRepeat;
