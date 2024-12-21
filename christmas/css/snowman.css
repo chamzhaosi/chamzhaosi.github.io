@@ -33,7 +33,6 @@
   transform-origin: top center;
   transform: translate(5%, 0) rotate(10deg);
   border-radius: 5vmax;
-  /* background-color: #d007; */
   box-shadow: 0 -12vh 0 -9vmin #222, 0 -20vh 0 -15vmin purple,
     0 -30vh 0 -15vmin #222;
   background-image: linear-gradient(
@@ -47,4 +46,32 @@
   background-position: 90% 40%, 16% 60%, 75% -20%;
   background-size: 20% 50%, 18% 45%, 30% 40%;
   background-repeat: no-repeat;
+}
+
+.snow_man_container.snow_man_2 {
+  left: 52%;
+}
+
+.snow_man_container.snow_man_container.snow_man_2::before {
+  box-shadow: 0.5vmin -103vh 0 -6vmin #222, 6.5vmin -103vh 0 -6vmin #222,
+    4.1vmin -99.3vh 0 -5.2vmin orange, 3.5vmin -102vh 3px 2vmin #fff,
+    3.5vmin -100vh 0 1.6vmin #b88c56, 3.5vmin -93vh 0 -6vmin #ad284b,
+    3.5vmin -89vh 0 -6vmin #ad284b, 3.5vmin -85vh 0 -6vmin #ad284b,
+    3.5vmin -92vh 3px 3.5vmin #fff, 3.5vmin -91vh 0 3.1vmin #aaa,
+    3.5vmin -80vh 3px 5.5vmin #fff, 3.5vmin -79vh 0 5.1vmin #aaa;
+}
+
+.snow_man_container.snow_man_2::after {
+  transform: translate(-5%, 0) rotate(-10deg);
+  box-shadow: 0 -12vh 0 -9vmin #222, 0 -20vh 0 -15vmin #5e50d9,
+    0 -30vh 0 -15vmin #222;
+  background-image: linear-gradient(
+      70deg,
+      transparent 45%,
+      brown 0 50%,
+      transparent 0
+    ),
+    linear-gradient(-60deg, transparent 45%, brown 0 50%, transparent 0),
+    linear-gradient(-23deg, orange 20%, transparent 0);
+  background-position: 85% 80%, 12% 43%, 31% -19%;
 }
