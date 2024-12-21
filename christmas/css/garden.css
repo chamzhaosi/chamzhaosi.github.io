@@ -12,6 +12,8 @@
   width: var(--size, 70vw);
   height: calc(var(--size, 30vh) * 2);
   background-image: linear-gradient(to right, #308c48 20%, #3aba5c 80%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   transition: height var(--minItem_time) ease;
 }
 
