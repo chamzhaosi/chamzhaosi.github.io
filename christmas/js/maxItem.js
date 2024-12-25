@@ -6,8 +6,6 @@ const maxGarden = () => {
   }, TIME_OUT);
 };
 
-maxGarden();
-
 const treesGrow = () => {
   const trees = document.getElementById("tree_container");
 
@@ -16,8 +14,6 @@ const treesGrow = () => {
   }, TIME_OUT);
 };
 
-treesGrow();
-
 const dspSnowman = () => {
   const snowmans = document.getElementsByClassName("snow_man_container");
 
@@ -25,7 +21,5 @@ const dspSnowman = () => {
     for (let snowman of snowmans) {
       snowman.style.opacity = 1;
     }
-  }, TIME_OUT + TIME_OUT);
+  }, TIME_OUT * 2);
 };
-
-dspSnowman();

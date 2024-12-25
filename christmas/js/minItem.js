@@ -1,5 +1,3 @@
-const TIME_OUT = 3 * 1000;
-
 const minClouds = () => {
   setTimeout(() => {
     const clouds = document.getElementsByClassName("cloud");
@@ -16,7 +14,6 @@ const minClouds = () => {
     }
   }, [TIME_OUT]);
 };
-minClouds();
 
 const minRemoveMoon = () => {
   setTimeout(() => {
@@ -32,7 +29,6 @@ const minRemoveMoon = () => {
     }
   }, [TIME_OUT]);
 };
-minRemoveMoon();
 
 const minRemoveStar = () => {
   setTimeout(() => {
@@ -55,4 +51,3 @@ const minRemoveStar = () => {
     }
   }, [TIME_OUT]);
 };
-minRemoveStar();

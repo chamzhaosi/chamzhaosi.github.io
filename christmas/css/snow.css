@@ -5,6 +5,10 @@
   border-radius: 50%;
   opacity: 0.8;
   animation: fall linear infinite, sway ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: width var(--minItem_time) ease, height var(--minItem_time) ease;
 }
 
 /* Falling animation */

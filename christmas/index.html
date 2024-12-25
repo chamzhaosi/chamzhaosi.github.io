@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind CSS Example</title>
+    <title>猪猪和宝宝第一次的圣诞节</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/sky.css" />
     <link rel="stylesheet" href="./css/constant.css" />
     <link rel="stylesheet" href="./css/star.css" />
@@ -16,7 +17,9 @@
     <link rel="stylesheet" href="./css/snowman.css" />
   </head>
   <body class="sky">
-    <div class="moon absolute m-5"></div>
+    <audio id="windSound" src="./assest/windsound.mp3"></audio>
+    <audio id="christmsSong" src="./assest/christmassong.mp3" loop></audio>
+    <div id="moon_to_start_all" class="moon absolute m-5"></div>
     <div class="flex w-full">
       <div
         id="sky_star_container1"
@@ -62,11 +65,14 @@
       <div class="gardenTopRight"></div>
     </div>
 
+    <script src="./js/constant.js"></script>
     <script src="./js/star.js"></script>
     <script src="./js/snow.js"></script>
     <script src="./js/cloud.js"></script>
     <script src="./js/minItem.js"></script>
     <script src="./js/maxItem.js"></script>
     <script src="./js/gardenSnow.js"></script>
+    <script src="./js/playSound.js"></script>
+    <script src="./js/startAll.js"></script>
   </body>
 </html>

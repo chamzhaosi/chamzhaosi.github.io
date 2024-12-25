@@ -7,6 +7,7 @@
   animation: glow 3s infinite alternate;
   transition: width var(--minItem_time) ease, height var(--minItem_time) ease,
     transform var(--minItem_time) ease;
+  z-index: 1000;
 }
 
 /* Animation for changing opacity */

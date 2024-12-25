@@ -12,8 +12,8 @@ function getRandomPercentage() {
 
 // Function to generate a random size for background-size
 function getRandomSize() {
-  return `${Math.floor(Math.random() * 50) + 10}px ${
-    Math.floor(Math.random() * 50) + 10
+  return `${Math.floor(Math.random() * 50) + Math.random() * 10}px ${
+    Math.floor(Math.random() * 50) + Math.random() * 10
   }px`; // Random size between 10px and 100px
 }
 
@@ -65,27 +65,13 @@ function startUpdatingBackground(element, defaultImage, interval = TIME_OUT) {
   );
 }
 
-// Example usage:
-const garden = document.getElementById("garden"); // Replace with your element's ID
-startUpdatingBackground(garden);
-const gardenTopLeft = document.getElementsByClassName("gardenTopLeft")[0]; // Replace with your element's ID
-startUpdatingBackground(
-  gardenTopLeft,
-  "linear-gradient(to right, #308c48 20%, #3aba5c 80%)"
-);
-const gardenTopRight = document.getElementsByClassName("gardenTopRight")[0]; // Replace with your element's ID
-startUpdatingBackground(
-  gardenTopRight,
-  "linear-gradient(to right, #3aba5c, #11802e"
-);
-
 function setInitail(
   element,
   defaultImage,
   backgroundSizeList,
   backgroundImageList
 ) {
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < 10; i++) {
     updateBackground(
       element,
       defaultImage,

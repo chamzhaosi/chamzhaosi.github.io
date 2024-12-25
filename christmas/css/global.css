@@ -1,0 +1,7 @@
+@media (max-width: 1000px) {
+  html,
+  body {
+    display: none;
+    background-color: black;
+  }
+}
