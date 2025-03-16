@@ -1,0 +1,10 @@
+#burst-container {
+  position: relative;
+}
+
+.star {
+  position: absolute;
+  font-size: 25px;
+  color: gold;
+  opacity: 0;
+}
