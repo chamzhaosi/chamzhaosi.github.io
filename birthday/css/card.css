@@ -253,24 +253,16 @@
 .gift {
   width: 100px;
   height: 100px;
-  background-color: #fff68f;
+  /* background-color: #fff68f; */
+  background: linear-gradient(
+    to right,
+    #fff68f 42%,
+    #bf3131 42%,
+    #bf3131 62%,
+    #fff68f 62%
+  );
   border-radius: 10px;
   margin-bottom: 30px;
-  position: absolute;
-  top: -100px;
-  left: -50px;
-  z-index: 50;
-}
-
-.gift::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 20px;
-  height: 100px;
-  background-color: #bf3131;
-  left: 42px;
-  top: 0px;
 }
 
 .gift > input[type="checkbox"] {
@@ -285,8 +277,28 @@
   animation-play-state: running !important;
 }
 
+#click:checked ~ .wishes {
+  transform: translateY(-60px);
+}
+
 .wishes {
+  line-height: 30px;
+  color: #000046;
+  font-size: 20px;
+  text-transform: capitalize;
+  text-align: center;
+  transition: 2s;
   position: absolute;
+  z-index: -1;
+}
+
+.wishes:has(#love_sttm:checked) {
+  /* position: unset; */
+  z-index: 0;
+}
+
+.gift:has(#love_sttm:checked)::after {
+  z-index: -1;
 }
 
 .click {
