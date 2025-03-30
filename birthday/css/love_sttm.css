@@ -40,17 +40,6 @@
   transition: 2s;
 }
 
-/* .love_sttm::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0px;
-  width: 100%;
-  height: 0px;
-  background-color: wheat;
-  transition: 2s;
-} */
-
 #draft_letter {
   position: absolute;
   left: 25px;
@@ -58,7 +47,14 @@
   width: 100%;
   height: 0px;
   background-color: wheat;
-  transition: 2s;
+  /* transition: 2s; */
+  cursor: pointer;
+}
+
+#draft_letter:hover {
+  transition: unset !important;
+  transition-delay: unset !important;
+  background-color: rgb(224, 197, 146) !important;
 }
 
 #love_sttm:checked + .love_sttm {
@@ -75,7 +71,8 @@
 
 #love_sttm:checked ~ #draft_letter {
   transform: translateY(-2px);
-  transition-delay: 2s;
+  /* transition-delay: 2s;
+  transition: 2s; */
   height: 3px;
   z-index: 1;
 }
