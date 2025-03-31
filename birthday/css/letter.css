@@ -20,7 +20,7 @@
   padding-right: 8px;
   margin: 5px;
   border-radius: 5px;
-  background: rgb(245, 222, 179);
+  background: #ffe4e1;
   cursor: pointer;
 }
 #letter_closed:hover {
@@ -37,10 +37,13 @@
   max-height: 100%;
   padding: 25px;
   margin: auto;
-  background: wheat;
+  /* background: wheat; */
+  background: linear-gradient(to right, #ffd1dc, #ffe4e1 30%);
+  color: #c71585; /* Deep Pink for stylish contrast */
+  font-family: "Cursive", sans-serif;
   border: 1px solid brown;
   border-radius: 10px;
-  box-shadow: 0 0 11px 11px wheat;
+  box-shadow: 0 0 11px 11px #ffe4e1;
   text-align: justify;
   line-height: 22px;
   overflow-y: auto;

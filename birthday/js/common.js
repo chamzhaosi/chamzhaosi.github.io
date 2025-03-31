@@ -3,6 +3,7 @@ const star_delay = 10;
 const batch_delay = 1500;
 const star_distance = 300;
 const star_opacity_buffer = 0.3;
+const show_card_duration = 7800;
 
 document.addEventListener(
   "DOMContentLoaded", // Loop the star explosion every 1 second
@@ -11,5 +12,6 @@ document.addEventListener(
       createStars(Math.random() * number_stars + 2);
     }, batch_delay);
     updateTime();
+    showCard()
   }
 );
