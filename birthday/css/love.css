@@ -1,0 +1,11 @@
+#love_container {
+  position: absolute;
+}
+
+.love {
+  position: absolute;
+  left: 45px;
+  bottom: -60px;
+  opacity: 0;
+  color: rgb(240, 62, 62);
+}

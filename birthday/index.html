@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://kit.fontawesome.com/4453a54593.js" crossorigin="anonymous"></script>
-
-  <link rel="stylesheet" href="css/common.css" />
-  <link rel="stylesheet" href="css/star.css" />
-  <link rel="stylesheet" href="css/card.css" />
-  <link rel="stylesheet" href="css/card-mobile.css" />
-  <title>宝宝生日快乐</title>
-</head>
-
-<body>
-    <div class="card">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/4453a54593.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>宝宝生日快乐</title>
+    <link rel="icon" type="image/x-icon" href="/birthday/favicon.png?v=1" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/star.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <link rel="stylesheet" href="css/love.css" />
+    <link rel="stylesheet" href="css/love_sttm.css" />
+    <link rel="stylesheet" href="css/card-mobile.css" />
+    <link rel="stylesheet" href="css/letter.css" />
+  </head>
+  <body>
+    <div class="card card__unhover">
       <div class="outside">
         <div class="front">
-          <p>Happy Birthday</p>
+          <p>宝宝，生日快乐</p>
           <div class="cake">
             <div class="top-layer"></div>
             <div class="middle-1-layer"></div>
@@ -30,22 +34,68 @@
         </div>
         <div class="back"></div>
       </div>
-      <div class="inside">
-        <p>Whishing you a very happy birthday filled with love and laughter</p>
+      <div id="card_inside" class="inside">
+        <p>
+          宝宝🎂生日快乐！🎉🎁 恭喜你又老了一岁啦！🥳🎈
+          希望你每天都开开心心，幸福满满！💖😊
+          猪猪我想和宝宝一起度过未来的每一个生日🎊🎂💕
+        </p>
+        <span id="burst-container"></span>
         <div class="gift_container">
           <div class="gift">
-            <input id="click" type="checkbox">
+            <input id="click" type="checkbox" />
             <label for="click" class="click"></label>
             <div class="wishes">
-              Happy Birthday
+              <div class="love_sttm_container">
+                <input id="love_sttm" type="checkbox" />
+                <label for="love_sttm" class="love_sttm"> </label>
+                <div id="draft_letter"></div>
+              </div>
             </div>
-            <div id="burst-container"></div>
+            <div id="love_container"></div>
           </div>
         </div>
       </div>
     </div>
-  <script src="js/start.js"></script>
-  <script src="js/common.js"></script>
-</body>
 
+    <div id="letter_container">
+      <div class="letter-card-container">
+        <button id="letter_closed">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <p id="draft-love-letter">
+          我们是从 2024 年 9 月 14 日 晚上 9:11 在 Slowly 认识彼此的，随后在2024
+          年 10 月 4 日 之后开始用微信聊天，后来又改用 WhatsApp
+          继续交流。到现在，
+          <b
+            >我们已经认识了<span id="mnt">??</span>月，
+            <span id="day">??</span>天， <span id="hour">??</span>小时，
+            <span id="min">??</span>分钟, <span id="sec">??</span>秒 </b
+          >。
+          <br />
+          <br />
+          猪猪很开心有宝宝陪伴的日子。💕
+          宝宝一直都很温柔，很关心猪猪，也愿意不断提醒猪猪要照顾好自己。🐷💖
+          我知道宝宝喜欢猪猪，而猪猪又何尝不是呢？
+          <br />
+          <br />
+          可是，猪猪目前无法去宝宝那里工作和生活。😞
+          猪猪不是一个勇敢的人，害怕去了那里后，给不了宝宝想要的生活，甚至可能还会需要宝宝的接济。与其如此，猪猪更希望在这段时间努力，尽可能发展一些可以远程工作的事业，等有能力了，再去找宝宝。
+          <br />
+          <br />
+          🐷💭猪猪知道，宝宝的青春不应该浪费在等待上，所以一开始就告诉宝宝：如果宝宝在这期间还没有交男朋友，而等到猪猪有能力去宝宝那里了，宝宝可以给猪猪一个追求宝宝的机会吗？💕宝宝，我喜欢你……
+          💗
+          <br />
+          <br />
+          期待有一天，能真正地在现实里见到你，牵起你的手，一起创造属于我们的未来。🌍💑✨
+        </p>
+        <p id="love-letter"></p>
+      </div>
+    </div>
+
+    <script src="js/start.js"></script>
+    <script src="js/love.js"></script>
+    <script src="js/letter.js"></script>
+    <script src="js/common.js"></script>
+  </body>
 </html>

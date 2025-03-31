@@ -1,0 +1,96 @@
+.wishes > .love_sttm_container > input[type="checkbox"] {
+  display: none;
+}
+
+.love_sttm_container {
+  width: 50px;
+  height: 30px;
+  transition: transform 2s;
+}
+
+.love_sttm {
+  position: relative;
+  left: 25px;
+  top: 20px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgb(255, 20, 147),
+    rgb(220, 20, 60),
+    rgb(139, 0, 0)
+  );
+  background-size: 200% 200%;
+  animation: swing 2s ease-in-out infinite alternate,
+    pulseBackground 2s infinite alternate;
+  display: flex;
+  cursor: pointer;
+}
+
+.love_sttm::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  border-top: 18px solid rgb(174, 65, 101);
+  border-bottom: 15px solid transparent;
+  border-left: 25px solid transparent;
+  border-right: 25.5px solid transparent;
+  transform-style: preserve-3d;
+  transform-origin: top;
+  transition: 2s;
+}
+
+#draft_letter {
+  position: absolute;
+  left: 25px;
+  top: 19px;
+  width: 100%;
+  height: 0px;
+  background-color: wheat;
+  /* transition: 2s; */
+  cursor: pointer;
+}
+
+#draft_letter:hover {
+  transition: unset !important;
+  transition-delay: unset !important;
+  background-color: rgb(224, 197, 146) !important;
+}
+
+#love_sttm:checked + .love_sttm {
+  animation: none;
+}
+
+.love_sttm_container:has(#love_sttm:checked) {
+  transform: translateX(-100px) translateY(-30px) scale(5);
+}
+
+#love_sttm:checked + .love_sttm::after {
+  transform: rotateX(-130deg);
+}
+
+#love_sttm:checked ~ #draft_letter {
+  transform: translateY(-2px);
+  /* transition-delay: 2s;
+  transition: 2s; */
+  height: 3px;
+  z-index: 1;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes pulseBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}

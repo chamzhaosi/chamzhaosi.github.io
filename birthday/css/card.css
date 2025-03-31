@@ -1,6 +1,8 @@
 .card {
   max-width: 840px;
   max-height: 600px;
+  /* width: 640px;
+  height: 400px; */
   position: absolute;
   margin: auto;
   left: 0;
@@ -20,6 +22,10 @@
   transform: rotateY(-130deg);
 }
 
+.card:hover .star {
+  display: block;
+}
+
 .outside,
 .inside {
   height: 100%;
@@ -31,7 +37,7 @@
 
 .inside {
   background: linear-gradient(to right, #ffafdb, #ffc9ed 30%);
-  line-height: 3;
+  line-height: 2.8;
   padding: 0 20px;
   text-align: center;
   display: flex;
@@ -47,6 +53,29 @@
   z-index: 10;
   transform-origin: left;
   transition: 2s;
+}
+
+.card__unhover {
+  animation: card-unhover 0.8s linear 2s infinite alternate;
+}
+
+.card__unhover:hover {
+  animation: none;
+}
+
+@keyframes card-unhover {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-2deg);
+  }
+  21% {
+    transform: rotate(-0deg);
+  }
+  100% {
+    transform: rotate(-0deg);
+  }
 }
 
 .front,
@@ -136,7 +165,7 @@
 .third-candle::before {
   content: "";
   position: absolute;
-  height: 16px;
+  height: 20px;
   width: 16px;
   background-color: #ffa500;
   border-radius: 0 50% 50% 50%;
@@ -149,8 +178,65 @@
   right: 50px;
 }
 
+.first-candle::before {
+  animation: fire-effect-first-candle 2s linear 1s infinite alternate;
+}
+
+.second-candle::before {
+  animation: fire-effect-second-candle 3s linear 1s infinite alternate;
+}
+
 .third-candle {
   left: 50px;
+}
+
+.third-candle::before {
+  animation: fire-effect-third-candle 1s linear 1s infinite alternate;
+}
+
+@keyframes fire-effect-first-candle {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(60deg);
+  }
+  80% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes fire-effect-second-candle {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(50deg);
+  }
+  80% {
+    transform: rotate(60deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes fire-effect-third-candle {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(55deg);
+  }
+  80% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
 }
 
 .outside p {
@@ -169,19 +255,16 @@
 .gift {
   width: 100px;
   height: 100px;
-  background-color: #fff68f;
+  /* background-color: #fff68f; */
+  background: linear-gradient(
+    to right,
+    #fff68f 42%,
+    #bf3131 42%,
+    #bf3131 62%,
+    #fff68f 62%
+  );
   border-radius: 10px;
-}
-
-.gift::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 20px;
-  height: 100px;
-  background-color: #bf3131;
-  left: 42px;
-  top: 0px;
+  margin-bottom: 30px;
 }
 
 .gift > input[type="checkbox"] {
@@ -190,6 +273,10 @@
 
 #click:checked + .click {
   transform: translateX(-65px) translateY(-10px) rotate(-75deg) scale(0.85);
+}
+
+#click:checked ~ #love_container .love {
+  animation-play-state: running !important;
 }
 
 #click:checked ~ .wishes {
@@ -204,6 +291,15 @@
   text-align: center;
   transition: 2s;
   position: absolute;
+  z-index: -1;
+}
+
+.wishes:has(#love_sttm:checked) {
+  /* position: unset; */
+  z-index: 0;
+}
+
+.gift:has(#love_sttm:checked)::after {
   z-index: -1;
 }
 
@@ -241,5 +337,4 @@
   transform: rotate(-90deg);
   left: 50px;
   top: -30px;
-  border-radius: 10px;
 }

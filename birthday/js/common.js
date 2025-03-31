@@ -10,5 +10,6 @@ document.addEventListener(
     setInterval(() => {
       createStars(Math.random() * number_stars + 2);
     }, batch_delay);
+    updateTime();
   }
 );
