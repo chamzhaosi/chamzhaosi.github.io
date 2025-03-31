@@ -1,253 +1,245 @@
-.card{
-    width: 640px;
-    height: 400px;
-    position: absolute;
-    margin: auto;
-    left:0;
-    right:0;
-    top:0;
-    bottom: 0;
-    perspective: 1200px;
-    transition: 1s;
-    border-radius: 10px;
+.card {
+  max-width: 840px;
+  max-height: 600px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  perspective: 1200px;
+  transition: 1s;
+  border-radius: 10px;
 }
 
-.card:hover{
-    transform: rotate(-5deg);
+.card:hover {
+  transform: rotate(-5deg);
 }
 
-.card:hover .outside{
-    transform: rotateY(-130deg);
+.card:hover .outside {
+  transform: rotateY(-130deg);
 }
 
-
-.outside,.inside{
-    height: 100%;
-    width: 50%;
-    position: absolute;
-    left: 50.1%;
-    border-radius: 10px;
+.outside,
+.inside {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  left: 50.1%;
+  border-radius: 10px;
 }
 
-.inside{
-    background: linear-gradient(to right,  #ffafdb, #ffc9ed 30%);
-    line-height: 3;
-    padding: 0 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    left: 50%;
-    z-index: 5;
+.inside {
+  background: linear-gradient(to right, #ffafdb, #ffc9ed 30%);
+  line-height: 3;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  left: 50%;
+  z-index: 5;
 }
 
-.outside{
-    transform-style: preserve-3d;
-    z-index: 10;
-    transform-origin: left;
-    transition: 2s;
+.outside {
+  transform-style: preserve-3d;
+  z-index: 10;
+  transform-origin: left;
+  transition: 2s;
 }
 
-.front, .back{
-    height:100%;
-    width: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    transform: rotateX(0deg);
-    border-radius: 10px;
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  border-radius: 10px;
 }
 
 .front {
-    background-color: #ffafdb;
+  background-color: #ffafdb;
 }
 
-.back{
-    background: linear-gradient(to left, #ffafdb, #ffc9ed 30%);
-    transform: rotateY(180deg)
+.back {
+  background: linear-gradient(to left, #ffafdb, #ffc9ed 30%);
+  transform: rotateY(180deg);
 }
 
-.cake{
-    width: 100%;
-    position: absolute;
-    bottom: 30px;
+.cake {
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
 }
-
 
 .top-layer,
 .middle-1-layer,
 .middle-2-layer,
-.bottom-layer
-{
-     height: 80px;
-     width: 240px;
-     background-repeat: repeat;
-     background-size: 60px 100px;
-     background-position: 28px 0;
-     background-image: linear-gradient(
-        transparent 50px,
-        #fedbab 50px,
-        #fedbab 60px,
-        transparent 60px
-     ),
-     radial-gradient(
-        circle at 30px 5px, 
-     #fffff2 30px, 
-     #713810 31px);
+.bottom-layer {
+  height: 80px;
+  width: 240px;
+  background-repeat: repeat;
+  background-size: 60px 100px;
+  background-position: 28px 0;
+  background-image: linear-gradient(
+      transparent 50px,
+      #fedbab 50px,
+      #fedbab 60px,
+      transparent 60px
+    ),
+    radial-gradient(circle at 30px 5px, #fffff2 30px, #713810 31px);
 
-    border-radius: 10px 10px 0 0;
-    position: relative;
-    margin: auto;
-    z-index: 1;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  margin: auto;
+  z-index: 1;
 }
 
-.middle-1-layer{
-    transform: scale(0.85)  rotate(5deg);
-    top: 50px;
+.middle-1-layer {
+  transform: scale(0.85) rotate(5deg);
+  top: 50px;
 }
 
-.middle-2-layer{
-    transform: scale(0.90) rotate(-6deg);
-    top: 20px;
+.middle-2-layer {
+  transform: scale(0.9) rotate(-6deg);
+  top: 20px;
 }
 
-.top-layer{
-    transform: scale(0.7) rotate(2deg);
-    top: 85px;
+.top-layer {
+  transform: scale(0.7) rotate(2deg);
+  top: 85px;
 }
 
 .first-candle,
 .second-candle,
-.third-candle{
-    height: 45px;
-    width: 15px;
-    background: repeating-linear-gradient(
-        45deg,
-        #fd3018 0,
-        #fd3018 5px,
-        #ffa89e 5px,
-        #ffa89e 10px
-    );
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 220px;
+.third-candle {
+  height: 45px;
+  width: 15px;
+  background: repeating-linear-gradient(
+    45deg,
+    #fd3018 0,
+    #fd3018 5px,
+    #ffa89e 5px,
+    #ffa89e 10px
+  );
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 220px;
 }
 
 .first-candle::before,
 .second-candle::before,
-.third-candle::before{
-    content: "";
-    position: absolute;
-    height: 16px;
-    width: 16px;
-    background-color: #ffa500;
-    border-radius: 0 50% 50% 50%;
-    bottom: 48px;
-    transform: rotate(45deg);
-    left: -1px;
+.third-candle::before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  background-color: #ffa500;
+  border-radius: 0 50% 50% 50%;
+  bottom: 48px;
+  transform: rotate(45deg);
+  left: -1px;
 }
 
-.first-candle{
-    right: 50px;
+.first-candle {
+  right: 50px;
 }
 
-.third-candle{
-    left: 50px;
+.third-candle {
+  left: 50px;
 }
 
 .outside p {
-    font-size: 23px;
-    text-transform: uppercase;
-    margin-top: 30px;
-    text-align: center;
-    letter-spacing: 6px;
-    color: #000046;
+  font-size: 23px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  text-align: center;
+  letter-spacing: 6px;
+  color: #000046;
 }
 
-.gift_container{
-    position: relative;
+.gift_container {
+  position: relative;
 }
 
-.gift{
-    width: 100px;
-    height: 100px;
-    background-color: #fff68f;
-    border-radius: 10px;
+.gift {
+  width: 100px;
+  height: 100px;
+  background-color: #fff68f;
+  border-radius: 10px;
 }
 
-.gift::after{
-    content: "";
-    position: absolute;
-    display: block;
-    width: 20px;
-    height: 100px;
-    background-color: #BF3131;
-    left: 42px;
-    top: 0px;
+.gift::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 100px;
+  background-color: #bf3131;
+  left: 42px;
+  top: 0px;
 }
 
-.gift > input[type='checkbox']{
-    display: none;
+.gift > input[type="checkbox"] {
+  display: none;
 }
 
-#click:checked+.click{
-    transform: translateX(-65px) translateY(-10px) rotate(-75deg) scale(0.85);
-
+#click:checked + .click {
+  transform: translateX(-65px) translateY(-10px) rotate(-75deg) scale(0.85);
 }
 
-#click:checked~.wishes{
-    transform: translateY(-60px);
+#click:checked ~ .wishes {
+  transform: translateY(-60px);
 }
 
-.wishes{
-    line-height: 30px;
-    color: #000046;
-    font-size: 20px;
-    text-transform: capitalize;
-    text-align: center;
-    transition: 2s;
-    position: absolute;
-    z-index: -1;
+.wishes {
+  line-height: 30px;
+  color: #000046;
+  font-size: 20px;
+  text-transform: capitalize;
+  text-align: center;
+  transition: 2s;
+  position: absolute;
+  z-index: -1;
 }
 
-.click{
-    cursor: pointer;
-    position: absolute;
-    width: 120px;
-    height: 30px;
-    left: -10px;
-    top: -28px;
-    display: flex;
-    background-color: #EAD196;
-    border-bottom: 1px solid #D5C7A3;
-    transition: 2s;
+.click {
+  cursor: pointer;
+  position: absolute;
+  width: 120px;
+  height: 30px;
+  left: -10px;
+  top: -28px;
+  display: flex;
+  background-color: #ead196;
+  border-bottom: 1px solid #d5c7a3;
+  transition: 2s;
 }
 
-.click::before{
-    content: "";
-    background-color: #7D0A0A;
-    position: absolute;
-    width: 20px;
-    height: 30px;
-    left: 52px;
+.click::before {
+  content: "";
+  background-color: #7d0a0a;
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  left: 52px;
 }
 
-.click::after{
-    content: "";
-    position: absolute;
-    width: 3px;
-    height: 0;
-    border-bottom: 20px solid #BF3131;
-    border-top: 20px solid #BF3131;
-    border-left: 0px solid transparent;
-    border-right: 20px solid transparent;
-    transform: rotate(-90deg);
-    left: 50px;
-    top: -30px
+.click::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 0;
+  border-bottom: 20px solid #bf3131;
+  border-top: 20px solid #bf3131;
+  border-left: 0px solid transparent;
+  border-right: 20px solid transparent;
+  transform: rotate(-90deg);
+  left: 50px;
+  top: -30px;
+  border-radius: 10px;
 }
-
-
-
-

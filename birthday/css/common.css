@@ -12,3 +12,7 @@ body {
   background-color: black;
   overflow: hidden;
 }
+
+main {
+  padding: 20px;
+}
