@@ -24,7 +24,7 @@ function createLove(count, container) {
     "rgb(255, 160, 180)", // Blush Pink
   ];
   let translateX = -130; // Start value
-  let step = (220 + 130) / count; // Ensure each step increases
+  let step = (220 + (screen.availWidth > 640 ? 130 : 100)) / count; // Ensure each step increases
 
   for (let i = 0; i < count; i++) {
     const love = document.createElement("i");

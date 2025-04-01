@@ -14,13 +14,18 @@
     <link rel="stylesheet" href="css/card.css" />
     <link rel="stylesheet" href="css/love.css" />
     <link rel="stylesheet" href="css/love_sttm.css" />
-    <link rel="stylesheet" href="css/card-mobile.css" />
     <link rel="stylesheet" href="css/letter.css" />
     <link rel="stylesheet" href="css/ballon.css">
+    <link rel="stylesheet" href="css/mobile.css" />
   </head>
   <body>
+    <audio id="bolloon" src="/birthday/assets/audios/balloon.mp3"></audio>
+    <audio id="birthday_card" src="/birthday/assets/audios/birthday-card.mp3"></audio>
+    <audio id="birthday_voiced" src="/birthday/assets/audios/zhuzhu-birthday-voiced.mp4"></audio>
+    <audio id="birthday_sound" src="/birthday/assets/audios/happy-birthday-sound.mp3" loop></audio>
+    
     <div class="box-canvas">
-      <div class="balloon-wrapper red">
+      <div id="red_balloon" class="balloon-wrapper red">
         <div class="string"></div>
         <div class="balloon"></div>
       </div>
@@ -42,15 +47,13 @@
       </div>
     <div class="draft_card"></div>
     </div>
-    
+
     <div id="card_container" class="card card__unhover">
       <div class="outside">
         <div class="front">
           <p>😘宝宝😍
             <br>
             🎊生日快乐🎉</p>
-            <!-- <img src="/birthday/assets/images/sheep.png" alt="" srcset="">
-            <img src="/birthday/assets/images/pig.png" alt="" srcset=""> -->
           <div class="cake">
             <div class="top-layer"></div>
             <div class="middle-layer"></div>
@@ -121,10 +124,12 @@
       </div>
     </div>
 
-    <script src="js/start.js"></script>
+    <script src="js/stars.js"></script>
     <script src="js/love.js"></script>
     <script src="js/letter.js"></script>
     <script src="js/card.js"></script>
+    <script src="js/playSound.js"></script>
+    <script src="js/balloon.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
