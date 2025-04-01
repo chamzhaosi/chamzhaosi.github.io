@@ -5,7 +5,6 @@
   background: rgba(255, 255, 255, 0.2); /* Transparent white */
   backdrop-filter: blur(10px); /* Blurs everything behind it */
   display: none;
-  /* display: flex; */
   justify-content: center;
   align-items: center;
   padding: 30px;
@@ -23,7 +22,6 @@
   background: #ffe4e1;
   cursor: pointer;
 }
-
 #letter_closed:hover {
   background: rgb(245 200 179);
 }
@@ -34,6 +32,7 @@
 
 .letter-card-container {
   position: relative;
+  max-width: 60%;
   max-height: 100%;
   padding: 25px;
   background: linear-gradient(to right, #ffd1dc, #ffe4e1 30%);

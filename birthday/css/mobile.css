@@ -173,6 +173,10 @@
     left: 25px;
   }
 
+  .letter-card-container {
+    max-width: 100%;
+  }
+
   .love_sttm_container:has(#love_sttm:checked) {
     transform: translateX(-95px) translateY(-30px) scale(4.5);
   }
