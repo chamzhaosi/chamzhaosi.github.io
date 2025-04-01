@@ -6,6 +6,7 @@
     perspective: 1200px;
     transition: 1s;
     border-radius: 10px;
+    top: -80px;
   }
 
   .card:hover {
@@ -18,7 +19,7 @@
 
   .outside,
   .inside {
-    height: 50%;
+    height: 60%;
     width: 100%;
     top: 50%;
     left: 0;
@@ -27,7 +28,8 @@
   .inside {
     background: linear-gradient(to bottom, #ffafdb, #ffd1dc 30%);
     left: 0;
-    font-size: small;
+    font-size: 17px;
+    line-height: 2;
   }
 
   .outside {
@@ -37,7 +39,7 @@
 
   .outside p {
     font-size: 30px;
-    margin-top: 25px;
+    margin-top: 40px;
   }
 
   .cake {
@@ -71,7 +73,7 @@
   .first-candle,
   .second-candle,
   .third-candle {
-    bottom: 90px;
+    bottom: 100px;
   }
 
   .gift {
@@ -161,6 +163,14 @@
   /* Love mobile view */
   .love {
     bottom: -20px;
+  }
+
+  .love_sttm {
+    left: 17px;
+  }
+
+  #love_sttm:checked + .love_sttm {
+    left: 25px;
   }
 
   .love_sttm_container:has(#love_sttm:checked) {

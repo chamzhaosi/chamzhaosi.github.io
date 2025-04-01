@@ -25,7 +25,7 @@ function createLove(count, container) {
   ];
   let translateX = -130; // Start value
   let step = (220 + (screen.availWidth > 640 ? 130 : 100)) / count; // Ensure each step increases
-
+  
   for (let i = 0; i < count; i++) {
     const love = document.createElement("i");
     const span = document.createElement("span");
