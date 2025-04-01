@@ -34,11 +34,8 @@
 
 .letter-card-container {
   position: relative;
-  /* width: 80%; */
-  /* max-height: 100%; */
+  max-height: 100%;
   padding: 25px;
-  margin: auto;
-  /* background: wheat; */
   background: linear-gradient(to right, #ffd1dc, #ffe4e1 30%);
   color: #c71585; /* Deep Pink for stylish contrast */
   font-family: "Cursive", sans-serif;
